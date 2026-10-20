@@ -206,7 +206,7 @@
       <div class="text-center max-w-4xl mx-auto">
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-pill text-emerald-300 text-xs font-semibold mb-6">
           <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          Domain-Dynamic Custom CRM • Zero Per-Seat SaaS Tax
+          Domain-Dynamic Custom CRM
         </div>
 
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.12] mb-6">
@@ -256,10 +256,6 @@
         <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-5 text-center">
           <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">Any ERP</div>
           <div class="text-xs sm:text-sm text-slate-400 mt-1">Custom Bi-Directional Sync & Recovery</div>
-        </div>
-        <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-5 text-center">
-          <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">Zero</div>
-          <div class="text-xs sm:text-sm text-slate-400 mt-1">Per-Agent Monthly Licensing Bloat</div>
         </div>
       </div>
     </div>
@@ -1409,7 +1405,7 @@
                 <div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">3</div>
                 <div>
                   <strong class="text-white block">Dedicated Cloud Go-Live</strong>
-                  <span class="text-slate-400 text-xs">Deployed on your AWS/GCP infrastructure with full admin settings control and zero per-seat tax.</span>
+                  <span class="text-slate-400 text-xs">Deployed on your AWS/GCP infrastructure with full admin settings control</span>
                 </div>
               </div>
             </div>
@@ -1730,6 +1726,10 @@
       };
 
       console.log('Captured CRM Lead Payload:', payload);
+      const waText = encodeURIComponent(
+        `Hi, I just requested a Custom CRM demo.\n\n*Name:* ${payload.name}\n*Company:* ${payload.company}\n*Industry:* ${payload.industry}\n*Seats:* ${payload.seats}\n*Modules:* ${payload.integrations}\n*Notes:* ${payload.notes}`
+      );
+      window.open(`https://wa.me/918691923653?text=${waText}`, '_blank');
 
       const banner = document.getElementById('formSuccessBanner');
       const details = document.getElementById('formSuccessDetails');
