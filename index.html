@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth overflow-x-hidden">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
   
   <!-- Primary SEO Meta Tags -->
   <title>NexusOps CRM | Custom Omnichannel Order, Queue, RBAC & ERP-Integrated CRM</title>
@@ -11,7 +11,7 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://rampupcrm.com/" />
 
-  <!-- Custom Bespoke SVG Favicon (Embedded Data URI - Matches Header Logo) -->
+  <!-- Custom Bespoke SVG Favicon (Matches Header Brand Mark) -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none'%3E%3Crect width='64' height='64' rx='16' fill='%230B131E'/%3E%3Crect x='2' y='2' width='60' height='60' rx='14' stroke='%2310B981' stroke-opacity='0.35' stroke-width='2'/%3E%3Cpath d='M18 46V18L34 38V18' stroke='url(%23g1)' stroke-width='5.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M34 38L46 22M34 38L46 46' stroke='%2334D399' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='18' cy='18' r='4' fill='%2310B981'/%3E%3Ccircle cx='46' cy='22' r='4.5' fill='%2334D399'/%3E%3Ccircle cx='46' cy='46' r='4.5' fill='%23F59E0B'/%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='18' y1='18' x2='34' y2='46' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2310B981'/%3E%3Cstop offset='1' stop-color='%23059669'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E" />
 
   <!-- Open Graph / Social Meta Tags -->
@@ -26,7 +26,7 @@
   <meta name="twitter:title" content="NexusOps CRM | Custom Order, Queue, RBAC & ERP-Connected CRM" />
   <meta name="twitter:description" content="Real-time Round-Robin lead routing, 360° Customer One View, Agent Session Audit Trails, Click-to-Call, WhatsApp & tailored ERP integration." />
 
-  <!-- JSON-LD Structured Data for SEO & GEO (AI Search Engines) -->
+  <!-- JSON-LD Structured Data for SEO & GEO -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -49,45 +49,7 @@
           "priceCurrency": "INR",
           "price": "0",
           "description": "Custom Enterprise Architecture & Tailored Deployment Quote"
-        },
-        "featureList": [
-          "Priority-Based Round-Robin Lead Assignment with Active Capacity Caps",
-          "5-Minute Abandoned Cart Capture Delay Engine",
-          "Granular 3-Tier RBAC: Create Permissions (View/Add/Update/Delete), Assign to Roles, Assign Roles to Users",
-          "Session-Level Agent Forensics: Track Login IP, Duration, Pages Visited, Product Searches & Cart/Order Changes",
-          "Live System Settings: Configure Free Delivery Thresholds, Wallet Caps, Queue Timers & Background Jobs in 60s",
-          "Order Transition Failed Queue with One-Click Bulk ERP Re-Sync",
-          "Custom ERP Integration (Tally, SAP, Oracle, Dynamics, Custom REST/SQL) & 3rd-Party Click-to-Call Telephony"
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Do you have a pre-built ERP plugin, or can you integrate with our existing custom or legacy ERP?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Every business structures its inventory, billing, and tax ledgers differently. Instead of forcing you into a rigid pre-built connector, our engineering team builds a tailored, bi-directional integration directly into whatever ERP you already use (SAP, Tally Prime, Microsoft Dynamics, Medica, or custom SQL/REST ERPs)—complete with an Order Transition Failed queue that catches and re-syncs any rejected orders."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How does the Supervisor Dashboard track what agents are actually doing during their shift?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Beyond live login/logout counts, Idle Time, and Lead Aging, NexusOps records S3-archived session-level telemetry for every agent. Supervisors can click any session to inspect exact timestamps of Pages Visited, exact search queries typed by the agent, and every item or status change made."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How does Role-Based Access Control (RBAC) work in NexusOps?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Admins have a 3-step zero-code RBAC builder: 1) Create granular Permission sets with individual View, Add, Update, and Delete toggles across every module and sub-module, 2) Bundle permissions into custom Roles, and 3) Assign one or multiple Roles to any user account."
-            }
-          }
-        ]
+        }
       }
     ]
   }
@@ -97,7 +59,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
-  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -128,36 +90,40 @@
 
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    .crm-shadow { box-shadow: 0 25px 60px -15px rgba(11, 19, 30, 0.35), 0 0 1px 1px rgba(15, 26, 42, 0.12); }
+    .crm-shadow { box-shadow: 0 20px 50px -12px rgba(11, 19, 30, 0.3), 0 0 1px 1px rgba(15, 26, 42, 0.12); }
     .glass-pill { background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3); }
-    .tab-active { background-color: #107C65; color: #ffffff; border-color: #107C65; }
+    .tab-active { background-color: #107C65 !important; color: #ffffff !important; border-color: #107C65 !important; }
     .crm-nav-active { background-color: rgba(16, 185, 129, 0.15); color: #34D399; border-left: 3px solid #10B981; }
+    /* Clean horizontal touch scrolling for mobile tabs & tables */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .table-scroll-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; width: 100%; }
   </style>
 </head>
 
-<body class="bg-slate-50 text-slate-900 antialiased selection:bg-emerald-600 selection:text-white">
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-emerald-600 selection:text-white overflow-x-hidden">
 
   <!-- Top Announcement Bar -->
-  <div class="bg-brand-dark text-slate-300 text-xs py-2.5 px-4 border-b border-slate-800">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-      <div class="flex items-center gap-2">
-        <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+  <div class="bg-brand-dark text-slate-300 text-[11px] sm:text-xs py-2.5 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1.5 text-center sm:text-left">
+      <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
           PRODUCTION-PROVEN CORE
         </span>
-        <span>Powering 6,000+ daily omnichannel orders, S3 session forensics, granular RBAC & custom ERP sync.</span>
+        <span>Powering 6,000+ daily orders, S3 session forensics, granular RBAC &amp; custom ERP sync.</span>
       </div>
-      <a href="#lead-form" class="text-emerald-400 hover:text-emerald-300 font-semibold inline-flex items-center gap-1">
-        Book a Custom Architecture Demo <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+      <a href="#lead-form" class="text-emerald-400 hover:text-emerald-300 font-semibold inline-flex items-center gap-1 shrink-0">
+        Book Custom Demo <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
       </a>
     </div>
   </div>
 
-  <!-- Sticky Navigation (Clean single-line spacing) -->
+  <!-- Sticky Navigation with Mobile Hamburger Drawer -->
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
-      <!-- Custom Engineered Vector Brand Mark (Matches Favicon) -->
-      <a href="#" class="flex items-center gap-3 shrink-0 group">
-        <svg class="w-11 h-11 rounded-xl shadow-md transition-transform group-hover:scale-105" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-3">
+      <!-- Custom Vector Brand Mark -->
+      <a href="#" class="flex items-center gap-2.5 sm:gap-3 shrink-0 group">
+        <svg class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl shadow-md transition-transform group-hover:scale-105" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="64" height="64" rx="15" fill="#0B131E"/>
           <rect x="2" y="2" width="60" height="60" rx="13" stroke="#10B981" stroke-opacity="0.35" stroke-width="2"/>
           <path d="M18 46V18L34 38V18" stroke="url(#brandGrad)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -174,13 +140,14 @@
         </svg>
         <div>
           <div class="flex items-center gap-1.5">
-            <span class="text-xl font-extrabold tracking-tight text-slate-900">Nexus<span class="text-brand-emerald">Ops</span></span>
-            <span class="text-[10px] font-mono font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-brand-emerald border border-emerald-200">CRM</span>
+            <span class="text-lg sm:text-xl font-extrabold tracking-tight text-slate-900">Nexus<span class="text-brand-emerald">Ops</span></span>
+            <span class="text-[9px] sm:text-[10px] font-mono font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-brand-emerald border border-emerald-200">CRM</span>
           </div>
-          <span class="block text-[10px] font-mono uppercase tracking-widest text-slate-400">Custom Operations Engine</span>
+          <span class="block text-[9px] sm:text-[10px] font-mono uppercase tracking-widest text-slate-400">Custom Operations Engine</span>
         </div>
       </a>
 
+      <!-- Desktop Links -->
       <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-600 whitespace-nowrap">
         <a href="#industry-switcher" class="hover:text-brand-emerald transition">Your Industry</a>
         <a href="#live-preview" class="hover:text-brand-emerald transition">Interactive Live UI</a>
@@ -189,161 +156,179 @@
         <a href="#comparison" class="hover:text-brand-emerald transition">Why Custom?</a>
       </nav>
 
-      <div class="flex items-center gap-2.5 shrink-0">
-        <a href="#live-preview" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-lg text-xs font-bold text-slate-700 hover:bg-slate-100 border border-slate-200 transition whitespace-nowrap">
-          <i data-lucide="terminal" class="w-4 h-4 text-brand-emerald"></i> Inspect Live Screens
+      <!-- Desktop CTA & Mobile Hamburger Button -->
+      <div class="flex items-center gap-2 shrink-0">
+        <a href="#live-preview" class="hidden md:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-bold text-slate-700 hover:bg-slate-100 border border-slate-200 transition whitespace-nowrap">
+          <i data-lucide="terminal" class="w-4 h-4 text-brand-emerald"></i> Live Screens
         </a>
-        <a href="#lead-form" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg text-xs sm:text-sm font-bold bg-brand-emerald hover:bg-brand-emeraldLight text-white shadow-sm transition whitespace-nowrap">
-          Get Custom Blueprint <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        <a href="#lead-form" class="inline-flex items-center gap-1 px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg text-xs sm:text-sm font-bold bg-brand-emerald hover:bg-brand-emeraldLight text-white shadow-sm transition whitespace-nowrap">
+          <span>Get Blueprint</span> <i data-lucide="chevron-right" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+        </a>
+        <button onclick="toggleMobileMenu()" aria-label="Toggle Menu" class="lg:hidden p-2 rounded-lg border border-slate-200 text-slate-700 hover:bg-slate-100">
+          <i data-lucide="menu" id="mobile-menu-icon" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-5 space-y-2 shadow-lg">
+      <a href="#industry-switcher" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-lg text-sm font-semibold text-slate-700 hover:bg-emerald-50 hover:text-brand-emerald">1. Industry Fit Switcher</a>
+      <a href="#live-preview" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-lg text-sm font-semibold text-slate-700 hover:bg-emerald-50 hover:text-brand-emerald">2. Interactive Live CRM Screens (8 Views)</a>
+      <a href="#core-modules" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-lg text-sm font-semibold text-slate-700 hover:bg-emerald-50 hover:text-brand-emerald">3. 12 Battle-Tested Modules</a>
+      <a href="#integrations" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-lg text-sm font-semibold text-slate-700 hover:bg-emerald-50 hover:text-brand-emerald">4. Click-to-Call, WhatsApp &amp; Custom ERP</a>
+      <a href="#comparison" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-lg text-sm font-semibold text-slate-700 hover:bg-emerald-50 hover:text-brand-emerald">5. NexusOps vs. Generic SaaS CRM</a>
+      <div class="pt-2">
+        <a href="#lead-form" onclick="toggleMobileMenu()" class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-bold bg-brand-emerald text-white">
+          Schedule Live Architecture Demo <i data-lucide="arrow-right" class="w-4 h-4"></i>
         </a>
       </div>
     </div>
   </header>
 
   <!-- HERO SECTION -->
-  <section class="relative overflow-hidden bg-gradient-to-b from-slate-900 via-brand-dark to-slate-900 text-white pt-16 pb-24 lg:pt-24 lg:pb-32">
+  <section class="relative overflow-hidden bg-gradient-to-b from-slate-900 via-brand-dark to-slate-900 text-white pt-12 pb-16 sm:pt-20 sm:pb-28">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="text-center max-w-4xl mx-auto">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-pill text-emerald-300 text-xs font-semibold mb-6">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          Domain-Dynamic Custom CRM
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-pill text-emerald-300 text-[11px] sm:text-xs font-semibold mb-5">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+          <span>Domain-Dynamic Custom CRM</span>
         </div>
 
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.12] mb-6">
-          The Operations & Order CRM Built Around <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">Your Workflow</span>—Not the Other Way Around.
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] mb-5">
+          The Operations &amp; Order CRM Built Around <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">Your Workflow</span>—Not the Other Way Around.
         </h1>
 
-        <p class="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10">
+        <p class="text-base sm:text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-8">
           Off-the-shelf CRMs choke when you need <strong class="text-white">real-time Round-Robin lead queues</strong>, <strong class="text-white">forensic agent session tracking</strong>, <strong class="text-white">granular RBAC permissions</strong>, and <strong class="text-white">custom bi-directional ERP integration</strong>. Our battle-tested core is already running in production—tailored to your stack and deployed in weeks.
         </p>
 
         <!-- Native Integration Badges -->
-        <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-10">
-          <div class="flex items-center gap-2.5 bg-slate-800/90 border border-slate-700 px-4 py-2.5 rounded-xl text-sm font-semibold">
-            <i data-lucide="phone-call" class="w-4 h-4 text-emerald-400"></i>
+        <div class="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center justify-center gap-2.5 sm:gap-3.5 mb-8">
+          <div class="flex items-center justify-center gap-2 bg-slate-800/90 border border-slate-700 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold">
+            <i data-lucide="phone-call" class="w-4 h-4 text-emerald-400 shrink-0"></i>
             <span>3rd-Party Click-to-Call Integration</span>
           </div>
-          <div class="flex items-center gap-2.5 bg-slate-800/90 border border-slate-700 px-4 py-2.5 rounded-xl text-sm font-semibold">
-            <i data-lucide="message-circle" class="w-4 h-4 text-green-400"></i>
+          <div class="flex items-center justify-center gap-2 bg-slate-800/90 border border-slate-700 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold">
+            <i data-lucide="message-circle" class="w-4 h-4 text-green-400 shrink-0"></i>
             <span>WhatsApp (WABA) Order Engine</span>
           </div>
-          <div class="flex items-center gap-2.5 bg-slate-800/90 border border-slate-700 px-4 py-2.5 rounded-xl text-sm font-semibold">
-            <i data-lucide="database-zap" class="w-4 h-4 text-amber-400"></i>
+          <div class="flex items-center justify-center gap-2 bg-slate-800/90 border border-slate-700 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold">
+            <i data-lucide="database-zap" class="w-4 h-4 text-amber-400 shrink-0"></i>
             <span>Tailored Integration to Your ERP</span>
           </div>
         </div>
 
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="#lead-form" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-bold bg-emerald-500 hover:bg-emerald-400 text-slate-950 shadow-lg shadow-emerald-500/20 transition">
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3.5">
+          <a href="#lead-form" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl text-sm sm:text-base font-bold bg-emerald-500 hover:bg-emerald-400 text-slate-950 shadow-lg shadow-emerald-500/20 transition">
             Request Your Custom CRM Demo <i data-lucide="arrow-right" class="w-5 h-5"></i>
           </a>
-          <a href="#live-preview" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl text-base font-semibold bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 transition">
-            Click Through 8 Live Production Screens <i data-lucide="layers" class="w-4 h-4"></i>
+          <a href="#live-preview" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm sm:text-base font-semibold bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 transition">
+            Inspect 8 Live Production Screens <i data-lucide="layers" class="w-4 h-4"></i>
           </a>
         </div>
       </div>
 
       <!-- Key Metrics Bar -->
-      <div class="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
-        <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-5 text-center">
-          <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">100%</div>
-          <div class="text-xs sm:text-sm text-slate-400 mt-1">Session-Level Agent Search & Edit Audit</div>
+      <div class="mt-12 sm:mt-16 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 max-w-5xl mx-auto">
+        <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-4 sm:p-5 text-center">
+          <div class="text-xl sm:text-3xl font-extrabold text-white font-mono">100%</div>
+          <div class="text-[11px] sm:text-sm text-slate-400 mt-1">Session Search &amp; Edit Audit</div>
         </div>
-        <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-5 text-center">
-          <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">&lt; 5 Min</div>
-          <div class="text-xs sm:text-sm text-slate-400 mt-1">Smart Cart-to-Agent Call Trigger</div>
+        <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-4 sm:p-5 text-center">
+          <div class="text-xl sm:text-3xl font-extrabold text-emerald-400 font-mono">&lt; 5 Min</div>
+          <div class="text-[11px] sm:text-sm text-slate-400 mt-1">Smart Cart-to-Agent Call Trigger</div>
         </div>
-        <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-5 text-center">
-          <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">Any ERP</div>
-          <div class="text-xs sm:text-sm text-slate-400 mt-1">Custom Bi-Directional Sync & Recovery</div>
+        <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-4 sm:p-5 text-center">
+          <div class="text-xl sm:text-3xl font-extrabold text-white font-mono">Any ERP</div>
+          <div class="text-[11px] sm:text-sm text-slate-400 mt-1">Custom Sync &amp; Error Recovery</div>
         </div>
-        <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-5 text-center">
-          <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">Marketing Module</div>
-          <div class="text-xs sm:text-sm text-slate-400 mt-1">Flash Sale, BxGy, Vouchers, Wallet Managemenet</div>
+        <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-4 sm:p-5 text-center">
+          <div class="text-xl sm:text-3xl font-extrabold text-emerald-400 font-mono">Marketing Module</div>
+          <div class="text-[11px] sm:text-sm text-slate-400 mt-1">Flash Sales, BxGy, Vouchers, Wallet Management</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- INTERACTIVE DOMAIN-DYNAMIC INDUSTRY SWITCHER -->
-  <section id="industry-switcher" class="py-20 bg-white border-b border-slate-200">
+  <section id="industry-switcher" class="py-14 sm:py-20 bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-12">
+      <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
         <span class="text-xs font-bold uppercase tracking-widest text-brand-emerald bg-emerald-50 px-3 py-1 rounded-full">Domain-Dynamic Architecture</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-3">
           One Proven Engine. Tailored Terminology for Your Exact Vertical.
         </h2>
-        <p class="text-slate-600 mt-3 text-base sm:text-lg">
-          Select your industry below to see how our production modules adapt to your stakeholders, compliance gates, and ERP fulfillment logic.
+        <p class="text-slate-600 mt-2.5 text-sm sm:text-lg">
+          Tap your industry below to see how our production modules adapt to your stakeholders, compliance gates, and ERP fulfillment logic.
         </p>
       </div>
 
-      <!-- Industry Selector Buttons -->
-      <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10" id="industry-tabs">
-        <button onclick="selectIndustry('d2c')" id="btn-d2c" class="industry-btn tab-active px-5 py-3 rounded-xl text-sm font-bold border border-slate-200 transition flex items-center gap-2">
-          <i data-lucide="shopping-bag" class="w-4 h-4"></i> D2C & Omnichannel Retail
+      <!-- Mobile-Responsive Industry Selector Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-wrap justify-center gap-2.5 mb-8 sm:mb-10" id="industry-tabs">
+        <button onclick="selectIndustry('d2c')" id="btn-d2c" class="industry-btn tab-active px-4 py-3 rounded-xl text-xs sm:text-sm font-bold border border-slate-200 transition flex items-center justify-center gap-2">
+          <i data-lucide="shopping-bag" class="w-4 h-4 shrink-0"></i> <span>D2C &amp; Omnichannel Retail</span>
         </button>
-        <button onclick="selectIndustry('b2b')" id="btn-b2b" class="industry-btn bg-slate-50 text-slate-700 hover:bg-slate-100 px-5 py-3 rounded-xl text-sm font-bold border border-slate-200 transition flex items-center gap-2">
-          <i data-lucide="boxes" class="w-4 h-4"></i> B2B Distribution & Wholesale
+        <button onclick="selectIndustry('b2b')" id="btn-b2b" class="industry-btn bg-slate-50 text-slate-700 hover:bg-slate-100 px-4 py-3 rounded-xl text-xs sm:text-sm font-bold border border-slate-200 transition flex items-center justify-center gap-2">
+          <i data-lucide="boxes" class="w-4 h-4 shrink-0"></i> <span>B2B Distribution &amp; Wholesale</span>
         </button>
-        <button onclick="selectIndustry('health')" id="btn-health" class="industry-btn bg-slate-50 text-slate-700 hover:bg-slate-100 px-5 py-3 rounded-xl text-sm font-bold border border-slate-200 transition flex items-center gap-2">
-          <i data-lucide="heart-pulse" class="w-4 h-4"></i> E-Pharmacy & Diagnostics
+        <button onclick="selectIndustry('health')" id="btn-health" class="industry-btn bg-slate-50 text-slate-700 hover:bg-slate-100 px-4 py-3 rounded-xl text-xs sm:text-sm font-bold border border-slate-200 transition flex items-center justify-center gap-2">
+          <i data-lucide="heart-pulse" class="w-4 h-4 shrink-0"></i> <span>E-Pharmacy &amp; Diagnostics</span>
         </button>
-        <button onclick="selectIndustry('fintech')" id="btn-fintech" class="industry-btn bg-slate-50 text-slate-700 hover:bg-slate-100 px-5 py-3 rounded-xl text-sm font-bold border border-slate-200 transition flex items-center gap-2">
-          <i data-lucide="shield-check" class="w-4 h-4"></i> FinTech, Real Estate & High-Ticket
+        <button onclick="selectIndustry('fintech')" id="btn-fintech" class="industry-btn bg-slate-50 text-slate-700 hover:bg-slate-100 px-4 py-3 rounded-xl text-xs sm:text-sm font-bold border border-slate-200 transition flex items-center justify-center gap-2">
+          <i data-lucide="shield-check" class="w-4 h-4 shrink-0"></i> <span>FinTech, Real Estate &amp; High-Ticket</span>
         </button>
       </div>
 
       <!-- Dynamic Industry Content Card -->
-      <div class="bg-slate-900 text-white rounded-3xl p-6 sm:p-10 shadow-xl border border-slate-800">
-        <div class="grid lg:grid-cols-12 gap-8 items-center">
-          <div class="lg:col-span-5 space-y-4">
-            <div id="ind-badge" class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-500/20 text-emerald-300 text-xs font-mono uppercase">
-              D2C & OMNICHANNEL COMMERCE
+      <div class="bg-slate-900 text-white rounded-2xl sm:rounded-3xl p-5 sm:p-10 shadow-xl border border-slate-800">
+        <div class="grid lg:grid-cols-12 gap-6 sm:gap-8 items-center">
+          <div class="lg:col-span-5 space-y-3.5">
+            <div id="ind-badge" class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-500/20 text-emerald-300 text-[11px] font-mono uppercase">
+              D2C &amp; OMNICHANNEL COMMERCE
             </div>
-            <h3 id="ind-title" class="text-2xl sm:text-3xl font-extrabold leading-tight">
-              Turn Abandoned Carts, WhatsApp Inquiries & Store Walk-ins Into Confirmed Dispatches.
+            <h3 id="ind-title" class="text-xl sm:text-3xl font-extrabold leading-tight">
+              Turn Abandoned Carts, WhatsApp Inquiries &amp; Store Walk-ins Into Confirmed Dispatches.
             </h3>
-            <p id="ind-desc" class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            <p id="ind-desc" class="text-slate-300 text-xs sm:text-base leading-relaxed">
               When high-intent shoppers drop off at checkout or message on WhatsApp, your tele-sales team gets the lead in 5 minutes—complete with past online + retail store bills, loyalty balance, and higher-margin substitute recommendations.
             </p>
-            <div class="pt-2">
-              <a href="#lead-form" class="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-bold text-sm">
+            <div class="pt-1">
+              <a href="#lead-form" class="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-bold text-xs sm:text-sm">
                 Request this configuration for your team <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
               </a>
             </div>
           </div>
 
-          <div class="lg:col-span-7 grid sm:grid-cols-2 gap-4">
-            <div class="bg-slate-800/80 border border-slate-700 p-5 rounded-2xl">
-              <div class="text-xs font-mono uppercase text-emerald-400 mb-1">Queue & Lead Routing</div>
-              <div id="ind-box1-title" class="font-bold text-base mb-1.5">5-Min Abandoned Cart & Web Queue</div>
+          <div class="lg:col-span-7 grid sm:grid-cols-2 gap-3.5 sm:gap-4">
+            <div class="bg-slate-800/80 border border-slate-700 p-4 sm:p-5 rounded-2xl">
+              <div class="text-[11px] font-mono uppercase text-emerald-400 mb-1">Queue &amp; Lead Routing</div>
+              <div id="ind-box1-title" class="font-bold text-sm sm:text-base mb-1.5">5-Min Abandoned Cart &amp; Web Queue</div>
               <p id="ind-box1-desc" class="text-xs text-slate-300 leading-relaxed">
                 Waits 5 minutes so self-checkout customers aren't disturbed, then auto-assigns to available agents (max 3 active leads/agent) via Round Robin.
               </p>
             </div>
 
-            <div class="bg-slate-800/80 border border-slate-700 p-5 rounded-2xl">
-              <div class="text-xs font-mono uppercase text-emerald-400 mb-1">Verification / Approval Gate</div>
-              <div id="ind-box2-title" class="font-bold text-base mb-1.5">VIP Custom Order & Styling Sign-Off</div>
+            <div class="bg-slate-800/80 border border-slate-700 p-4 sm:p-5 rounded-2xl">
+              <div class="text-[11px] font-mono uppercase text-emerald-400 mb-1">Verification / Approval Gate</div>
+              <div id="ind-box2-title" class="font-bold text-sm sm:text-base mb-1.5">VIP Custom Order &amp; Styling Sign-Off</div>
               <p id="ind-box2-desc" class="text-xs text-slate-300 leading-relaxed">
                 Routes high-value or customized orders to a specialist queue before pushing to warehouse billing and dispatch.
               </p>
             </div>
 
-            <div class="bg-slate-800/80 border border-slate-700 p-5 rounded-2xl">
-              <div class="text-xs font-mono uppercase text-emerald-400 mb-1">Upsell & Retention Engine</div>
-              <div id="ind-box3-title" class="font-bold text-base mb-1.5">Private-Label Substitutes & 30/60/90d Refills</div>
+            <div class="bg-slate-800/80 border border-slate-700 p-4 sm:p-5 rounded-2xl">
+              <div class="text-[11px] font-mono uppercase text-emerald-400 mb-1">Upsell &amp; Retention Engine</div>
+              <div id="ind-box3-title" class="font-bold text-sm sm:text-base mb-1.5">Private-Label Substitutes &amp; 30/60/90d Refills</div>
               <p id="ind-box3-desc" class="text-xs text-slate-300 leading-relaxed">
                 Prompts agents to pitch higher-margin in-house alternatives, multi-pack quantity discounts, and automated replenishment reminders.
               </p>
             </div>
 
-            <div class="bg-slate-800/80 border border-slate-700 p-5 rounded-2xl">
-              <div class="text-xs font-mono uppercase text-emerald-400 mb-1">Custom ERP & Store Bridge</div>
-              <div id="ind-box4-title" class="font-bold text-base mb-1.5">Multi-Branch Inventory & POS Sync</div>
+            <div class="bg-slate-800/80 border border-slate-700 p-4 sm:p-5 rounded-2xl">
+              <div class="text-[11px] font-mono uppercase text-emerald-400 mb-1">Custom ERP &amp; Store Bridge</div>
+              <div id="ind-box4-title" class="font-bold text-sm sm:text-base mb-1.5">Custom Integration to Your ERP &amp; POS</div>
               <p id="ind-box4-desc" class="text-xs text-slate-300 leading-relaxed">
-                We integrate with your existing ERP/POS to validate branch stock for Same-Day/Next-Day slots and sync retail invoices & credit notes.
+                We integrate with your existing ERP/POS to validate branch stock for Same-Day/Next-Day slots and sync retail invoices &amp; credit notes.
               </p>
             </div>
           </div>
@@ -352,54 +337,56 @@
     </div>
   </section>
 
-  <!-- INTERACTIVE LIVE PRODUCTION CRM REPLICA (8 SCREENS INCLUDING SESSION AUDIT, RBAC & SETTINGS) -->
-  <section id="live-preview" class="py-20 bg-slate-100 border-b border-slate-200">
+  <!-- INTERACTIVE LIVE PRODUCTION CRM REPLICA (MOBILE-OPTIMIZED TABS + SCROLLABLE TABLES) -->
+  <section id="live-preview" class="py-14 sm:py-20 bg-slate-100 border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="mb-8">
+      <div class="mb-6 sm:mb-8">
         <span class="text-xs font-bold uppercase tracking-widest text-brand-emerald bg-emerald-100 px-3 py-1 rounded-full">Interactive Production UI</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">
-          Inspect All 8 Live CRM Modules (Including Session Forensics, RBAC & Settings)
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-3">
+          Inspect All 8 Live CRM Modules
         </h2>
-        <p class="text-slate-600 mt-2 max-w-3xl">
-          Click any module tab below or in the dark sidebar to test our live production views—from S3-archived agent search/activity logs to zero-code RBAC permission matrices and 60-second live system settings.
+        <p class="text-slate-600 mt-2 text-sm sm:text-base max-w-3xl">
+          Tap any module tab below to test our live production views—from S3-archived agent search/activity logs to zero-code RBAC permission matrices and 60-second live system settings.
         </p>
 
-        <!-- Screen Switcher Pills (8 Tabs) -->
-        <div class="flex flex-wrap gap-2 mt-6">
-          <button onclick="switchCrmScreen('orders')" id="crm-btn-orders" class="crm-tab-btn tab-active px-3.5 py-2 rounded-lg text-xs font-bold border border-slate-300 transition">
+        <!-- Mobile-Friendly Touch-Scrollable Screen Switcher Pills -->
+        <div class="mt-5 -mx-4 px-4 sm:mx-0 sm:px-0 flex overflow-x-auto no-scrollbar sm:flex-wrap gap-2 pb-2">
+          <button onclick="switchCrmScreen('orders')" id="crm-btn-orders" class="crm-tab-btn tab-active shrink-0 px-3.5 py-2.5 rounded-lg text-xs font-bold border border-slate-300 transition">
             1. Orders Master
           </button>
-          <button onclick="switchCrmScreen('supervisor')" id="crm-btn-supervisor" class="crm-tab-btn bg-white text-slate-700 px-3.5 py-2 rounded-lg text-xs font-bold border border-slate-300 transition">
-            2. Supervisor Telemetry
+          <button onclick="switchCrmScreen('supervisor')" id="crm-btn-supervisor" class="crm-tab-btn bg-white text-slate-700 shrink-0 px-3.5 py-2.5 rounded-lg text-xs font-bold border border-slate-300 transition">
+            2. Supervisor Live
           </button>
-          <button onclick="switchCrmScreen('session')" id="crm-btn-session" class="crm-tab-btn bg-white text-slate-700 px-3.5 py-2 rounded-lg text-xs font-bold border border-slate-300 transition flex items-center gap-1.5">
-            3. Agent Session Audit <span class="px-1.5 py-0.5 text-[10px] rounded bg-emerald-100 text-brand-emerald font-mono">NEW</span>
+          <button onclick="switchCrmScreen('session')" id="crm-btn-session" class="crm-tab-btn bg-white text-slate-700 shrink-0 px-3.5 py-2.5 rounded-lg text-xs font-bold border border-slate-300 transition flex items-center gap-1.5">
+            <span>3. Session Forensics</span> <span class="px-1.5 py-0.5 text-[10px] rounded bg-emerald-100 text-brand-emerald font-mono">NEW</span>
           </button>
-          <button onclick="switchCrmScreen('rbac')" id="crm-btn-rbac" class="crm-tab-btn bg-white text-slate-700 px-3.5 py-2 rounded-lg text-xs font-bold border border-slate-300 transition flex items-center gap-1.5">
-            4. Users & RBAC Matrix <span class="px-1.5 py-0.5 text-[10px] rounded bg-emerald-100 text-brand-emerald font-mono">NEW</span>
+          <button onclick="switchCrmScreen('rbac')" id="crm-btn-rbac" class="crm-tab-btn bg-white text-slate-700 shrink-0 px-3.5 py-2.5 rounded-lg text-xs font-bold border border-slate-300 transition flex items-center gap-1.5">
+            <span>4. RBAC Matrix</span> <span class="px-1.5 py-0.5 text-[10px] rounded bg-emerald-100 text-brand-emerald font-mono">NEW</span>
           </button>
-          <button onclick="switchCrmScreen('settings')" id="crm-btn-settings" class="crm-tab-btn bg-white text-slate-700 px-3.5 py-2 rounded-lg text-xs font-bold border border-slate-300 transition flex items-center gap-1.5">
-            5. System Settings <span class="px-1.5 py-0.5 text-[10px] rounded bg-emerald-100 text-brand-emerald font-mono">NEW</span>
+          <button onclick="switchCrmScreen('settings')" id="crm-btn-settings" class="crm-tab-btn bg-white text-slate-700 shrink-0 px-3.5 py-2.5 rounded-lg text-xs font-bold border border-slate-300 transition flex items-center gap-1.5">
+            <span>5. System Settings</span> <span class="px-1.5 py-0.5 text-[10px] rounded bg-emerald-100 text-brand-emerald font-mono">NEW</span>
           </button>
-          <button onclick="switchCrmScreen('failed')" id="crm-btn-failed" class="crm-tab-btn bg-white text-slate-700 px-3.5 py-2 rounded-lg text-xs font-bold border border-slate-300 transition flex items-center gap-1.5">
-            6. ERP Transition Failed <span class="px-1.5 py-0.5 text-[10px] rounded-full bg-amber-500 text-slate-950 font-extrabold">99+</span>
+          <button onclick="switchCrmScreen('failed')" id="crm-btn-failed" class="crm-tab-btn bg-white text-slate-700 shrink-0 px-3.5 py-2.5 rounded-lg text-xs font-bold border border-slate-300 transition flex items-center gap-1.5">
+            <span>6. ERP Failed</span> <span class="px-1.5 py-0.5 text-[10px] rounded-full bg-amber-500 text-slate-950 font-extrabold">99+</span>
           </button>
-          <button onclick="switchCrmScreen('channels')" id="crm-btn-channels" class="crm-tab-btn bg-white text-slate-700 px-3.5 py-2 rounded-lg text-xs font-bold border border-slate-300 transition">
-            7. Agent Queue Priority
+          <button onclick="switchCrmScreen('channels')" id="crm-btn-channels" class="crm-tab-btn bg-white text-slate-700 shrink-0 px-3.5 py-2.5 rounded-lg text-xs font-bold border border-slate-300 transition">
+            7. Queue Priority
           </button>
-          <button onclick="switchCrmScreen('coupons')" id="crm-btn-coupons" class="crm-tab-btn bg-white text-slate-700 px-3.5 py-2 rounded-lg text-xs font-bold border border-slate-300 transition">
-            8. Coupons & Rules
+          <button onclick="switchCrmScreen('coupons')" id="crm-btn-coupons" class="crm-tab-btn bg-white text-slate-700 shrink-0 px-3.5 py-2.5 rounded-lg text-xs font-bold border border-slate-300 transition">
+            8. Coupons
           </button>
+        </div>
+        <div class="sm:hidden text-[11px] text-slate-500 font-medium flex items-center gap-1 mt-1">
+          <i data-lucide="move-horizontal" class="w-3.5 h-3.5 text-brand-emerald"></i> Swipe tabs or tables horizontally to explore
         </div>
       </div>
 
       <!-- CRM Window Mockup -->
-      <div class="rounded-2xl overflow-hidden border border-slate-300 crm-shadow bg-white grid lg:grid-cols-12 min-h-[590px]">
+      <div class="rounded-2xl overflow-hidden border border-slate-300 crm-shadow bg-white grid lg:grid-cols-12 min-h-[480px] lg:min-h-[590px]">
         
-        <!-- Dark Left Sidebar -->
-        <aside class="lg:col-span-3 xl:col-span-2 bg-brand-sidebar text-slate-300 flex flex-col justify-between p-4 select-none">
+        <!-- Dark Left Sidebar (Visible on Desktop lg+, Hidden on Mobile so workspace is immediately visible) -->
+        <aside class="hidden lg:flex lg:col-span-3 xl:col-span-2 bg-brand-sidebar text-slate-300 flex-col justify-between p-4 select-none">
           <div>
-            <!-- Brand Header -->
             <div class="flex items-center justify-between pb-4 mb-3 border-b border-slate-800">
               <div class="flex items-center gap-2.5">
                 <div class="w-7 h-7 rounded-lg bg-brand-emerald flex items-center justify-center text-white font-extrabold text-xs">N</div>
@@ -408,7 +395,6 @@
               <span class="text-[10px] font-mono bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded">LIVE</span>
             </div>
 
-            <!-- Sidebar Menu -->
             <div class="space-y-1 text-xs font-medium">
               <div class="px-3 py-1.5 text-slate-500 uppercase font-mono text-[10px]">CRM Operations</div>
               <button onclick="switchCrmScreen('orders')" id="side-orders" class="w-full text-left px-3 py-2 rounded-lg flex items-center justify-between crm-nav-active transition">
@@ -428,10 +414,10 @@
                 <span class="px-1.5 py-0.5 text-[10px] rounded-full bg-amber-500 text-slate-950 font-extrabold">99+</span>
               </button>
               <button onclick="switchCrmScreen('rbac')" id="side-rbac" class="w-full text-left px-3 py-2 rounded-lg flex items-center justify-between hover:bg-slate-800/60 transition">
-                <span class="flex items-center gap-2"><i data-lucide="shield" class="w-4 h-4"></i> User & Roles (RBAC)</span>
+                <span class="flex items-center gap-2"><i data-lucide="shield" class="w-4 h-4"></i> User &amp; Roles (RBAC)</span>
               </button>
               <button onclick="switchCrmScreen('coupons')" id="side-coupons" class="w-full text-left px-3 py-2 rounded-lg flex items-center justify-between hover:bg-slate-800/60 transition">
-                <span class="flex items-center gap-2"><i data-lucide="ticket" class="w-4 h-4"></i> Marketing & Coupons</span>
+                <span class="flex items-center gap-2"><i data-lucide="ticket" class="w-4 h-4"></i> Marketing &amp; Coupons</span>
               </button>
               <button onclick="switchCrmScreen('settings')" id="side-settings" class="w-full text-left px-3 py-2 rounded-lg flex items-center justify-between hover:bg-slate-800/60 transition">
                 <span class="flex items-center gap-2"><i data-lucide="settings" class="w-4 h-4"></i> Settings</span>
@@ -439,7 +425,6 @@
             </div>
           </div>
 
-          <!-- Logged in User Footer -->
           <div class="pt-4 border-t border-slate-800 flex items-center gap-2.5">
             <div class="w-8 h-8 rounded-full bg-emerald-700 text-white flex items-center justify-center font-bold text-xs">SA</div>
             <div class="overflow-hidden">
@@ -450,17 +435,17 @@
         </aside>
 
         <!-- Main CRM Workspace Area -->
-        <main class="lg:col-span-9 xl:col-span-10 p-6 bg-white overflow-x-auto">
+        <main class="col-span-12 lg:col-span-9 xl:col-span-10 p-4 sm:p-6 bg-white min-w-0">
           
           <!-- SCREEN 1: OMNICHANNEL ORDERS -->
-          <div id="screen-orders" class="crm-screen space-y-5">
-            <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-100 pb-4">
+          <div id="screen-orders" class="crm-screen space-y-4 sm:space-y-5">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
               <div>
                 <div class="flex items-center gap-2">
-                  <h3 class="text-xl font-extrabold text-slate-900">Orders Master List</h3>
+                  <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Orders Master List</h3>
                   <span class="text-xs font-mono bg-slate-100 text-slate-700 px-2.5 py-0.5 rounded-full">6,068 orders</span>
                 </div>
-                <p class="text-xs text-slate-500 mt-0.5">Real-time view across Web, WhatsApp (WABA), Inbound Click-to-Call & Abandoned Carts</p>
+                <p class="text-xs text-slate-500 mt-0.5">Real-time view across Web, WhatsApp (WABA), Inbound Click-to-Call &amp; Abandoned Carts</p>
               </div>
               <div class="flex flex-wrap items-center gap-2">
                 <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-brand-emerald text-white">
@@ -469,201 +454,201 @@
                 <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-emerald-700 text-white">
                   <i data-lucide="download" class="w-3.5 h-3.5"></i> Download Report
                 </span>
-                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-200 text-slate-700">
-                  Map Order Status
-                </span>
               </div>
             </div>
 
             <!-- Stage Filter Pills -->
-            <div class="flex flex-wrap gap-2 text-xs font-semibold">
-              <span class="px-3 py-1 rounded-full bg-emerald-50 text-brand-emerald border border-emerald-200">All</span>
-              <span class="px-3 py-1 rounded-full bg-slate-100 text-slate-600">● Order Pending</span>
-              <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-700">● Assigned to Specialist</span>
-              <span class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700">● ERP Order Pending</span>
-              <span class="px-3 py-1 rounded-full bg-purple-50 text-purple-700">● Invoice Created</span>
-              <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700">● Delivery Slip Created</span>
-              <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700">● Delivered</span>
-              <span class="px-3 py-1 rounded-full bg-rose-50 text-rose-700">● CreditNote Created</span>
+            <div class="flex overflow-x-auto no-scrollbar sm:flex-wrap gap-2 text-xs font-semibold pb-1">
+              <span class="shrink-0 px-3 py-1 rounded-full bg-emerald-50 text-brand-emerald border border-emerald-200">All</span>
+              <span class="shrink-0 px-3 py-1 rounded-full bg-slate-100 text-slate-600">● Order Pending</span>
+              <span class="shrink-0 px-3 py-1 rounded-full bg-blue-50 text-blue-700">● Assigned to Specialist</span>
+              <span class="shrink-0 px-3 py-1 rounded-full bg-indigo-50 text-indigo-700">● ERP Order Pending</span>
+              <span class="shrink-0 px-3 py-1 rounded-full bg-purple-50 text-purple-700">● Invoice Created</span>
+              <span class="shrink-0 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700">● Delivered</span>
+              <span class="shrink-0 px-3 py-1 rounded-full bg-rose-50 text-rose-700">● CreditNote Created</span>
             </div>
 
-            <!-- Orders Table -->
-            <table class="w-full text-left border-collapse text-xs">
-              <thead>
-                <tr class="border-b border-slate-200 text-[11px] font-bold text-slate-400 uppercase tracking-wider">
-                  <th class="py-3 px-2">Order ID</th>
-                  <th class="py-3 px-2">Customer</th>
-                  <th class="py-3 px-2">Account Type</th>
-                  <th class="py-3 px-2">Items</th>
-                  <th class="py-3 px-2">Amount</th>
-                  <th class="py-3 px-2">Order Status</th>
-                  <th class="py-3 px-2">ERP Document ID</th>
-                  <th class="py-3 px-2">Payment</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-slate-100 text-slate-700">
-                <tr class="hover:bg-slate-50">
-                  <td class="py-3.5 px-2 font-mono font-bold text-slate-900">ORD-00006068 <span class="block text-[10px] text-amber-600 font-sans">Approval Gate ⏳</span></td>
-                  <td class="py-3.5 px-2 font-semibold">AARAV SHARMA</td>
-                  <td class="py-3.5 px-2"><span class="text-emerald-600 font-semibold">Self / Direct</span></td>
-                  <td class="py-3.5 px-2 font-mono">4</td>
-                  <td class="py-3.5 px-2 font-bold">₹1,354 <span class="block text-[10px] text-emerald-600">-₹171</span></td>
-                  <td class="py-3.5 px-2"><span class="px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 font-semibold">● ERP Order Pending</span></td>
-                  <td class="py-3.5 px-2 font-mono text-[11px]">2647154003695 <span class="block text-[10px] text-slate-400">Doc 471/26/6/3695</span></td>
-                  <td class="py-3.5 px-2"><span class="px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 font-semibold">Payment Pending</span></td>
-                </tr>
-                <tr class="hover:bg-slate-50">
-                  <td class="py-3.5 px-2 font-mono font-bold text-slate-900">ORD-00006065</td>
-                  <td class="py-3.5 px-2 font-semibold">PRIYA NAIR</td>
-                  <td class="py-3.5 px-2"><span class="text-emerald-600 font-semibold">Repeat VIP</span></td>
-                  <td class="py-3.5 px-2 font-mono">2</td>
-                  <td class="py-3.5 px-2 font-bold">₹906 <span class="block text-[10px] text-emerald-600">-₹140</span></td>
-                  <td class="py-3.5 px-2"><span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 font-semibold">● Order Confirmed</span></td>
-                  <td class="py-3.5 px-2 font-mono text-[11px]">2647154003694</td>
-                  <td class="py-3.5 px-2"><span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-semibold">Prepaid + Wallet</span></td>
-                </tr>
-                <tr class="hover:bg-slate-50">
-                  <td class="py-3.5 px-2 font-mono font-bold text-slate-900">ORD-00006064</td>
-                  <td class="py-3.5 px-2 font-semibold">VIKRAMADITYA RAO</td>
-                  <td class="py-3.5 px-2"><span class="text-emerald-600 font-semibold">B2B Account</span></td>
-                  <td class="py-3.5 px-2 font-mono">5</td>
-                  <td class="py-3.5 px-2 font-bold">₹9,772 <span class="block text-[10px] text-emerald-600">-₹1,508</span></td>
-                  <td class="py-3.5 px-2"><span class="px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 font-semibold">● ERP Order Pending</span></td>
-                  <td class="py-3.5 px-2 font-mono text-[11px]">2647154003693 <span class="block text-[10px] text-slate-400">Doc 471/26/6/3693</span></td>
-                  <td class="py-3.5 px-2"><span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-semibold">Paid Online</span></td>
-                </tr>
-              </tbody>
-            </table>
+            <!-- Orders Table (Scrollable Wrapper on Mobile) -->
+            <div class="table-scroll-wrapper border border-slate-100 rounded-xl">
+              <table class="w-full min-w-[680px] text-left border-collapse text-xs">
+                <thead>
+                  <tr class="border-b border-slate-200 bg-slate-50/70 text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+                    <th class="py-3 px-3">Order ID</th>
+                    <th class="py-3 px-3">Customer</th>
+                    <th class="py-3 px-3">Account Type</th>
+                    <th class="py-3 px-3">Items</th>
+                    <th class="py-3 px-3">Amount</th>
+                    <th class="py-3 px-3">Order Status</th>
+                    <th class="py-3 px-3">ERP Document ID</th>
+                    <th class="py-3 px-3">Payment</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100 text-slate-700">
+                  <tr class="hover:bg-slate-50">
+                    <td class="py-3.5 px-3 font-mono font-bold text-slate-900">ORD-00006068 <span class="block text-[10px] text-amber-600 font-sans">Approval Gate ⏳</span></td>
+                    <td class="py-3.5 px-3 font-semibold">AARAV SHARMA</td>
+                    <td class="py-3.5 px-3"><span class="text-emerald-600 font-semibold">Self / Direct</span></td>
+                    <td class="py-3.5 px-3 font-mono">4</td>
+                    <td class="py-3.5 px-3 font-bold">₹1,354 <span class="block text-[10px] text-emerald-600">-₹171</span></td>
+                    <td class="py-3.5 px-3"><span class="px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 font-semibold">● ERP Order Pending</span></td>
+                    <td class="py-3.5 px-3 font-mono text-[11px]">2647154003695 <span class="block text-[10px] text-slate-400">Doc 471/26/6/3695</span></td>
+                    <td class="py-3.5 px-3"><span class="px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 font-semibold">Payment Pending</span></td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="py-3.5 px-3 font-mono font-bold text-slate-900">ORD-00006065</td>
+                    <td class="py-3.5 px-3 font-semibold">PRIYA NAIR</td>
+                    <td class="py-3.5 px-3"><span class="text-emerald-600 font-semibold">Repeat VIP</span></td>
+                    <td class="py-3.5 px-3 font-mono">2</td>
+                    <td class="py-3.5 px-3 font-bold">₹906 <span class="block text-[10px] text-emerald-600">-₹140</span></td>
+                    <td class="py-3.5 px-3"><span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 font-semibold">● Order Confirmed</span></td>
+                    <td class="py-3.5 px-3 font-mono text-[11px]">2647154003694</td>
+                    <td class="py-3.5 px-3"><span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-semibold">Prepaid + Wallet</span></td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="py-3.5 px-3 font-mono font-bold text-slate-900">ORD-00006064</td>
+                    <td class="py-3.5 px-3 font-semibold">VIKRAMADITYA RAO</td>
+                    <td class="py-3.5 px-3"><span class="text-emerald-600 font-semibold">B2B Account</span></td>
+                    <td class="py-3.5 px-3 font-mono">5</td>
+                    <td class="py-3.5 px-3 font-bold">₹9,772 <span class="block text-[10px] text-emerald-600">-₹1,508</span></td>
+                    <td class="py-3.5 px-3"><span class="px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 font-semibold">● ERP Order Pending</span></td>
+                    <td class="py-3.5 px-3 font-mono text-[11px]">2647154003693 <span class="block text-[10px] text-slate-400">Doc 471/26/6/3693</span></td>
+                    <td class="py-3.5 px-3"><span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-semibold">Paid Online</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
           <!-- SCREEN 2: SUPERVISOR DASHBOARD -->
-          <div id="screen-supervisor" class="crm-screen hidden space-y-5">
-            <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-100 pb-4">
+          <div id="screen-supervisor" class="crm-screen hidden space-y-4 sm:space-y-5">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
               <div>
                 <div class="flex items-center gap-2">
-                  <h3 class="text-xl font-extrabold text-slate-900">Supervisor Dashboard</h3>
+                  <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Supervisor Dashboard</h3>
                   <span class="text-xs font-semibold bg-emerald-50 text-brand-emerald px-2.5 py-0.5 rounded-full">33 agents</span>
                 </div>
                 <p class="text-xs text-slate-500 mt-0.5">Live agent productivity, login/logout ratio, idle time, and clickable session activity drawers</p>
               </div>
-              <button onclick="switchCrmScreen('session')" class="px-3.5 py-1.5 rounded-lg bg-emerald-50 text-brand-emerald border border-emerald-200 text-xs font-bold hover:bg-emerald-100 transition">
-                Inspect Agent Session Forensics →
+              <button onclick="switchCrmScreen('session')" class="self-start sm:self-auto px-3.5 py-2 rounded-lg bg-emerald-50 text-brand-emerald border border-emerald-200 text-xs font-bold hover:bg-emerald-100 transition">
+                Inspect Session Forensics →
               </button>
             </div>
 
             <!-- KPI Cards -->
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-              <div class="p-3.5 rounded-xl border border-slate-200">
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5 sm:gap-3">
+              <div class="p-3 rounded-xl border border-slate-200">
                 <div class="text-[10px] font-bold text-slate-400 uppercase">Total Agents</div>
-                <div class="text-2xl font-extrabold text-slate-900 mt-1">33</div>
+                <div class="text-xl sm:text-2xl font-extrabold text-slate-900 mt-0.5">33</div>
                 <div class="text-[10px] text-slate-400">CRM users</div>
               </div>
-              <div class="p-3.5 rounded-xl border border-emerald-200 bg-emerald-50/40">
+              <div class="p-3 rounded-xl border border-emerald-200 bg-emerald-50/40">
                 <div class="text-[10px] font-bold text-emerald-700 uppercase">Active</div>
-                <div class="text-2xl font-extrabold text-emerald-700 mt-1">18</div>
+                <div class="text-xl sm:text-2xl font-extrabold text-emerald-700 mt-0.5">18</div>
                 <div class="text-[10px] text-emerald-600">Logged in</div>
               </div>
-              <div class="p-3.5 rounded-xl border border-rose-200 bg-rose-50/40">
+              <div class="p-3 rounded-xl border border-rose-200 bg-rose-50/40">
                 <div class="text-[10px] font-bold text-rose-700 uppercase">Inactive</div>
-                <div class="text-2xl font-extrabold text-rose-700 mt-1">15</div>
+                <div class="text-xl sm:text-2xl font-extrabold text-rose-700 mt-0.5">15</div>
                 <div class="text-[10px] text-rose-600">Logged out</div>
               </div>
-              <div class="p-3.5 rounded-xl border border-blue-200 bg-blue-50/40">
+              <div class="p-3 rounded-xl border border-blue-200 bg-blue-50/40">
                 <div class="text-[10px] font-bold text-blue-700 uppercase">Assigned Leads</div>
-                <div class="text-2xl font-extrabold text-blue-700 mt-1">42</div>
+                <div class="text-xl sm:text-2xl font-extrabold text-blue-700 mt-0.5">42</div>
                 <div class="text-[10px] text-blue-600">Max 3 / Agent</div>
               </div>
-              <div class="p-3.5 rounded-xl border border-amber-200 bg-amber-50/40">
-                <div class="text-[10px] font-bold text-amber-700 uppercase">Unassigned Leads</div>
-                <div class="text-2xl font-extrabold text-amber-700 mt-1">87</div>
+              <div class="p-3 rounded-xl border border-amber-200 bg-amber-50/40">
+                <div class="text-[10px] font-bold text-amber-700 uppercase">Unassigned</div>
+                <div class="text-xl sm:text-2xl font-extrabold text-amber-700 mt-0.5">87</div>
                 <div class="text-[10px] text-amber-600">Cart: 52 • Web: 35</div>
               </div>
-              <div class="p-3.5 rounded-xl border border-purple-200 bg-purple-50/40">
-                <div class="text-[10px] font-bold text-purple-700 uppercase">Orders Processed</div>
-                <div class="text-2xl font-extrabold text-purple-700 mt-1">614</div>
-                <div class="text-[10px] text-purple-600">In selected range</div>
+              <div class="p-3 rounded-xl border border-purple-200 bg-purple-50/40">
+                <div class="text-[10px] font-bold text-purple-700 uppercase">Processed</div>
+                <div class="text-xl sm:text-2xl font-extrabold text-purple-700 mt-0.5">614</div>
+                <div class="text-[10px] text-purple-600">Today's shift</div>
               </div>
             </div>
 
             <!-- Agent Telemetry Table -->
-            <table class="w-full text-left border-collapse text-xs">
-              <thead>
-                <tr class="border-b border-slate-200 text-[11px] font-bold text-slate-400 uppercase">
-                  <th class="py-3 px-2">Agent</th>
-                  <th class="py-3 px-2">Status</th>
-                  <th class="py-3 px-2">First Login</th>
-                  <th class="py-3 px-2">Last Logout</th>
-                  <th class="py-3 px-2">Login/Logout</th>
-                  <th class="py-3 px-2">Assigned</th>
-                  <th class="py-3 px-2">Processed</th>
-                  <th class="py-3 px-2">Idle Time</th>
-                  <th class="py-3 px-2">Lead Aging</th>
-                  <th class="py-3 px-2 text-right">Audit</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-slate-100">
-                <tr class="hover:bg-slate-50">
-                  <td class="py-3 px-2 font-bold text-slate-900">Aadil Mansuri <span class="block text-[10px] font-normal text-slate-400">aadil.m@nexusops.io</span></td>
-                  <td class="py-3 px-2"><span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold text-[11px]">● Logged In</span></td>
-                  <td class="py-3 px-2 font-mono">01:07 pm</td>
-                  <td class="py-3 px-2 font-mono">03:12 pm</td>
-                  <td class="py-3 px-2 font-mono font-bold">4/3</td>
-                  <td class="py-3 px-2 font-bold">3</td>
-                  <td class="py-3 px-2 font-bold">29</td>
-                  <td class="py-3 px-2 font-mono text-slate-400">—</td>
-                  <td class="py-3 px-2 font-mono text-rose-600 font-bold">1h 43m</td>
-                  <td class="py-3 px-2 text-right">
-                    <button onclick="switchCrmScreen('session')" class="text-brand-emerald font-bold hover:underline">View Sessions →</button>
-                  </td>
-                </tr>
-                <tr class="hover:bg-slate-50">
-                  <td class="py-3 px-2 font-bold text-slate-900">Rohan Gupta <span class="block text-[10px] font-normal text-slate-400">rohan.g@nexusops.io</span></td>
-                  <td class="py-3 px-2"><span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold text-[11px]">● Logged In</span></td>
-                  <td class="py-3 px-2 font-mono">12:11 pm</td>
-                  <td class="py-3 px-2 font-mono">02:57 pm</td>
-                  <td class="py-3 px-2 font-mono">2/2</td>
-                  <td class="py-3 px-2 font-bold">0</td>
-                  <td class="py-3 px-2 font-bold">18</td>
-                  <td class="py-3 px-2 font-mono text-rose-600 font-bold">4h 18m</td>
-                  <td class="py-3 px-2 font-mono text-slate-400">—</td>
-                  <td class="py-3 px-2 text-right">
-                    <button onclick="switchCrmScreen('session')" class="text-brand-emerald font-bold hover:underline">View Sessions →</button>
-                  </td>
-                </tr>
-                <tr class="hover:bg-slate-50">
-                  <td class="py-3 px-2 font-bold text-slate-900">Simran Shaikh <span class="block text-[10px] font-normal text-slate-400">simran@nexusops.io</span></td>
-                  <td class="py-3 px-2"><span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold text-[11px]">● Logged In</span></td>
-                  <td class="py-3 px-2 font-mono">01:00 pm</td>
-                  <td class="py-3 px-2 font-mono">06:26 pm</td>
-                  <td class="py-3 px-2 font-mono">8/7</td>
-                  <td class="py-3 px-2 font-bold">2</td>
-                  <td class="py-3 px-2 font-bold">41</td>
-                  <td class="py-3 px-2 font-mono text-slate-600">5m</td>
-                  <td class="py-3 px-2 font-mono text-slate-400">—</td>
-                  <td class="py-3 px-2 text-right">
-                    <button onclick="switchCrmScreen('session')" class="text-brand-emerald font-bold hover:underline">View Sessions →</button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="table-scroll-wrapper border border-slate-100 rounded-xl">
+              <table class="w-full min-w-[720px] text-left border-collapse text-xs">
+                <thead>
+                  <tr class="border-b border-slate-200 bg-slate-50/70 text-[11px] font-bold text-slate-400 uppercase">
+                    <th class="py-3 px-3">Agent</th>
+                    <th class="py-3 px-3">Status</th>
+                    <th class="py-3 px-3">First Login</th>
+                    <th class="py-3 px-3">Last Logout</th>
+                    <th class="py-3 px-3">Login/Logout</th>
+                    <th class="py-3 px-3">Assigned</th>
+                    <th class="py-3 px-3">Processed</th>
+                    <th class="py-3 px-3">Idle Time</th>
+                    <th class="py-3 px-3">Lead Aging</th>
+                    <th class="py-3 px-3 text-right">Audit</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                  <tr class="hover:bg-slate-50">
+                    <td class="py-3 px-3 font-bold text-slate-900">Aadil Mansuri <span class="block text-[10px] font-normal text-slate-400">aadil.m@nexusops.io</span></td>
+                    <td class="py-3 px-3"><span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold text-[11px]">● Logged In</span></td>
+                    <td class="py-3 px-3 font-mono">01:07 pm</td>
+                    <td class="py-3 px-3 font-mono">03:12 pm</td>
+                    <td class="py-3 px-3 font-mono font-bold">4/3</td>
+                    <td class="py-3 px-3 font-bold">3</td>
+                    <td class="py-3 px-3 font-bold">29</td>
+                    <td class="py-3 px-3 font-mono text-slate-400">—</td>
+                    <td class="py-3 px-3 font-mono text-rose-600 font-bold">1h 43m</td>
+                    <td class="py-3 px-3 text-right">
+                      <button onclick="switchCrmScreen('session')" class="text-brand-emerald font-bold hover:underline">View Sessions →</button>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="py-3 px-3 font-bold text-slate-900">Rohan Gupta <span class="block text-[10px] font-normal text-slate-400">rohan.g@nexusops.io</span></td>
+                    <td class="py-3 px-3"><span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold text-[11px]">● Logged In</span></td>
+                    <td class="py-3 px-3 font-mono">12:11 pm</td>
+                    <td class="py-3 px-3 font-mono">02:57 pm</td>
+                    <td class="py-3 px-3 font-mono">2/2</td>
+                    <td class="py-3 px-3 font-bold">0</td>
+                    <td class="py-3 px-3 font-bold">18</td>
+                    <td class="py-3 px-3 font-mono text-rose-600 font-bold">4h 18m</td>
+                    <td class="py-3 px-3 font-mono text-slate-400">—</td>
+                    <td class="py-3 px-3 text-right">
+                      <button onclick="switchCrmScreen('session')" class="text-brand-emerald font-bold hover:underline">View Sessions →</button>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="py-3 px-3 font-bold text-slate-900">Simran Shaikh <span class="block text-[10px] font-normal text-slate-400">simran@nexusops.io</span></td>
+                    <td class="py-3 px-3"><span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold text-[11px]">● Logged In</span></td>
+                    <td class="py-3 px-3 font-mono">01:00 pm</td>
+                    <td class="py-3 px-3 font-mono">06:26 pm</td>
+                    <td class="py-3 px-3 font-mono">8/7</td>
+                    <td class="py-3 px-3 font-bold">2</td>
+                    <td class="py-3 px-3 font-bold">41</td>
+                    <td class="py-3 px-3 font-mono text-slate-600">5m</td>
+                    <td class="py-3 px-3 font-mono text-slate-400">—</td>
+                    <td class="py-3 px-3 text-right">
+                      <button onclick="switchCrmScreen('session')" class="text-brand-emerald font-bold hover:underline">View Sessions →</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
-          <!-- SCREEN 3: AGENT SESSION-LEVEL FORENSICS & SEARCH/CHANGE AUDIT (FROM YOUR SCREENSHOTS) -->
-          <div id="screen-session" class="crm-screen hidden space-y-5">
-            <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-100 pb-4">
-              <div class="flex items-center gap-3">
-                <button onclick="switchCrmScreen('supervisor')" class="px-2.5 py-1 rounded border border-slate-200 text-xs font-semibold text-slate-600 hover:bg-slate-50">← Back</button>
+          <!-- SCREEN 3: AGENT SESSION-LEVEL FORENSICS -->
+          <div id="screen-session" class="crm-screen hidden space-y-4 sm:space-y-5">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
+              <div class="flex items-start sm:items-center gap-2.5">
+                <button onclick="switchCrmScreen('supervisor')" class="px-2.5 py-1 rounded border border-slate-200 text-xs font-semibold text-slate-600 hover:bg-slate-50 shrink-0">← Back</button>
                 <div>
-                  <div class="flex items-center gap-2">
-                    <h3 class="text-lg font-extrabold text-slate-900">Aadil Mansuri — Session Activity Audit</h3>
+                  <div class="flex flex-wrap items-center gap-2">
+                    <h3 class="text-base sm:text-lg font-extrabold text-slate-900">Aadil Mansuri — Session Audit</h3>
                     <span class="text-[10px] font-mono bg-slate-100 text-slate-600 px-2 py-0.5 rounded border border-slate-200">Archived (S3)</span>
                   </div>
-                  <p class="text-xs text-slate-500">Session Window: 01:45 pm → 03:12 pm • IP: 169.254.169.126 • Complete keystroke search & mutation log</p>
+                  <p class="text-xs text-slate-500">01:45 pm → 03:12 pm • IP: 169.254.169.126 • Search &amp; mutation log</p>
                 </div>
               </div>
               <!-- Filter Pills -->
-              <div class="flex items-center gap-1.5 text-xs font-bold">
-                <button onclick="filterSessionEvents('all')" id="sess-btn-all" class="px-3 py-1 rounded-full bg-brand-emerald text-white">All (84 events)</button>
+              <div class="flex flex-wrap items-center gap-1.5 text-xs font-bold">
+                <button onclick="filterSessionEvents('all')" id="sess-btn-all" class="px-3 py-1 rounded-full bg-brand-emerald text-white">All (84)</button>
                 <button onclick="filterSessionEvents('pages')" id="sess-btn-pages" class="px-3 py-1 rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200">Pages (22)</button>
                 <button onclick="filterSessionEvents('searches')" id="sess-btn-searches" class="px-3 py-1 rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200">Searches (31)</button>
                 <button onclick="filterSessionEvents('changes')" id="sess-btn-changes" class="px-3 py-1 rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200">Changes (29)</button>
@@ -671,73 +656,73 @@
             </div>
 
             <!-- 4 Summary Metrics -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-              <div class="p-3.5 rounded-xl border border-slate-200">
-                <div class="text-[10px] font-bold text-slate-400 uppercase">Session Duration</div>
-                <div class="text-xl font-extrabold text-slate-900 mt-1">1h 26m</div>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
+              <div class="p-3 rounded-xl border border-slate-200">
+                <div class="text-[10px] font-bold text-slate-400 uppercase">Duration</div>
+                <div class="text-lg sm:text-xl font-extrabold text-slate-900 mt-0.5">1h 26m</div>
               </div>
-              <div class="p-3.5 rounded-xl border border-slate-200">
+              <div class="p-3 rounded-xl border border-slate-200">
                 <div class="text-[10px] font-bold text-slate-400 uppercase">Pages Visited</div>
-                <div class="text-xl font-extrabold text-blue-600 mt-1">22</div>
+                <div class="text-lg sm:text-xl font-extrabold text-blue-600 mt-0.5">22</div>
               </div>
-              <div class="p-3.5 rounded-xl border border-slate-200">
-                <div class="text-[10px] font-bold text-slate-400 uppercase">Product / Order Searches</div>
-                <div class="text-xl font-extrabold text-purple-600 mt-1">31</div>
+              <div class="p-3 rounded-xl border border-slate-200">
+                <div class="text-[10px] font-bold text-slate-400 uppercase">Searches</div>
+                <div class="text-lg sm:text-xl font-extrabold text-purple-600 mt-0.5">31</div>
               </div>
-              <div class="p-3.5 rounded-xl border border-slate-200">
+              <div class="p-3 rounded-xl border border-slate-200">
                 <div class="text-[10px] font-bold text-slate-400 uppercase">Changes Made</div>
-                <div class="text-xl font-extrabold text-indigo-600 mt-1">29</div>
+                <div class="text-lg sm:text-xl font-extrabold text-indigo-600 mt-0.5">29</div>
               </div>
             </div>
 
-            <!-- Two-Column Layout: Event Stream + Session Switcher Drawer -->
-            <div class="grid lg:grid-cols-12 gap-5">
-              <div class="lg:col-span-8 space-y-2.5 text-xs border border-slate-200 rounded-xl p-4 bg-slate-50/40 max-h-[310px] overflow-y-auto">
-                <div class="sess-item sess-change flex items-start gap-3 pb-2.5 border-b border-slate-100">
+            <!-- Two-Column Layout -->
+            <div class="grid lg:grid-cols-12 gap-4 sm:gap-5">
+              <div class="lg:col-span-8 space-y-2.5 text-xs border border-slate-200 rounded-xl p-3.5 sm:p-4 bg-slate-50/40 max-h-[300px] overflow-y-auto">
+                <div class="sess-item sess-change flex items-start gap-2.5 pb-2.5 border-b border-slate-100">
                   <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold shrink-0">→</span>
-                  <div>
+                  <div class="min-w-0">
                     <span class="font-mono text-slate-400">01:45:46 pm</span> <strong class="text-emerald-700 ml-1">Logged in</strong>
-                    <div class="text-[11px] text-slate-500">Session authenticated from 169.254.169.126 • Role: Senior Processing Agent</div>
+                    <div class="text-[11px] text-slate-500 break-words">Session authenticated from 169.254.169.126</div>
                   </div>
                 </div>
 
-                <div class="sess-item sess-page flex items-start gap-3 pb-2.5 border-b border-slate-100">
+                <div class="sess-item sess-page flex items-start gap-2.5 pb-2.5 border-b border-slate-100">
                   <span class="w-6 h-6 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold shrink-0">👁</span>
-                  <div>
+                  <div class="min-w-0">
                     <span class="font-mono text-slate-400">01:45:53 pm</span> <strong class="text-blue-600 ml-1">Viewed page</strong>
-                    <div class="font-mono text-[11px] text-slate-600">/dashboard/crm/customer-one-view</div>
+                    <div class="font-mono text-[11px] text-slate-600 break-all">/dashboard/crm/customer-one-view</div>
                   </div>
                 </div>
 
-                <div class="sess-item sess-change flex items-start gap-3 pb-2.5 border-b border-slate-100">
+                <div class="sess-item sess-change flex items-start gap-2.5 pb-2.5 border-b border-slate-100">
                   <span class="w-6 h-6 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold shrink-0">⚡</span>
-                  <div>
+                  <div class="min-w-0">
                     <span class="font-mono text-slate-400">01:57:47 pm</span> <strong class="text-indigo-700 ml-1">MANUAL_LEAD_CREATED</strong>
-                    <div class="font-mono text-[11px] text-slate-500">LEADID=5a526cfe-d5b5-4fd7 • CUSTOMERID=bac69c77-9251</div>
+                    <div class="font-mono text-[11px] text-slate-500 break-all">LEADID=5a526cfe-d5b5 • CUSTOMERID=bac69c77</div>
                   </div>
                 </div>
 
-                <div class="sess-item sess-search flex items-start gap-3 pb-2.5 border-b border-slate-100">
+                <div class="sess-item sess-search flex items-start gap-2.5 pb-2.5 border-b border-slate-100">
                   <span class="w-6 h-6 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center font-bold shrink-0">🔍</span>
-                  <div>
+                  <div class="min-w-0">
                     <span class="font-mono text-slate-400">01:58:02 pm</span> <strong class="text-purple-700 ml-1">Searched</strong>
-                    <div class="text-[11px] text-slate-600">Manual Order Products • Query: <span class="font-mono font-bold text-slate-900">"cipcal*"</span> • 30 results returned</div>
+                    <div class="text-[11px] text-slate-600">Manual Order Products • <span class="font-mono font-bold text-slate-900">"cipcal*"</span> • 30 results</div>
                   </div>
                 </div>
 
-                <div class="sess-item sess-search flex items-start gap-3 pb-2.5 border-b border-slate-100">
+                <div class="sess-item sess-search flex items-start gap-2.5 pb-2.5 border-b border-slate-100">
                   <span class="w-6 h-6 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center font-bold shrink-0">🔍</span>
-                  <div>
+                  <div class="min-w-0">
                     <span class="font-mono text-slate-400">02:11:05 pm</span> <strong class="text-purple-700 ml-1">Searched</strong>
-                    <div class="text-[11px] text-slate-600">Manual Order Products • Query: <span class="font-mono font-bold text-slate-900">"GLYCHECK*"</span> • 30 results returned</div>
+                    <div class="text-[11px] text-slate-600">Manual Order Products • <span class="font-mono font-bold text-slate-900">"GLYCHECK*"</span> • 30 results</div>
                   </div>
                 </div>
 
-                <div class="sess-item sess-change flex items-start gap-3">
+                <div class="sess-item sess-change flex items-start gap-2.5">
                   <span class="w-6 h-6 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold shrink-0">📦</span>
-                  <div>
-                    <span class="font-mono text-slate-400">02:12:10 pm</span> <strong class="text-indigo-700 ml-1">CART_ITEM_CREATED &amp; QTY_MODIFIED</strong>
-                    <div class="text-[11px] text-slate-600">Added SKU-9920 (Qty: 3) • Applied 2% bulk recommendation discount</div>
+                  <div class="min-w-0">
+                    <span class="font-mono text-slate-400">02:12:10 pm</span> <strong class="text-indigo-700 ml-1">CART_ITEM_CREATED</strong>
+                    <div class="text-[11px] text-slate-600">Added SKU-9920 (Qty: 3) • Applied 2% bulk discount</div>
                   </div>
                 </div>
               </div>
@@ -759,94 +744,74 @@
                   </div>
                   <div class="text-[10px] text-emerald-700 font-semibold mt-1">Currently Inspecting (84 events)</div>
                 </div>
-                <div class="p-3 rounded-xl border border-slate-200 bg-slate-50">
-                  <div class="flex justify-between font-mono text-[11px] text-slate-700 font-bold">
-                    <span>→ 01:15 pm to 01:43 pm</span>
-                    <span>27m</span>
-                  </div>
-                  <div class="text-[10px] text-slate-400 mt-1">169.254.169.126 • Archived</div>
-                </div>
               </div>
             </div>
           </div>
 
-          <!-- SCREEN 4: GRANULAR 3-STEP RBAC (CREATE PERMISSION -> CREATE ROLE -> ASSIGN TO USER) -->
-          <div id="screen-rbac" class="crm-screen hidden space-y-5">
-            <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-100 pb-4">
+          <!-- SCREEN 4: GRANULAR 3-STEP RBAC -->
+          <div id="screen-rbac" class="crm-screen hidden space-y-4 sm:space-y-5">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
               <div>
-                <h3 class="text-xl font-extrabold text-slate-900">Granular Role-Based Access Control (RBAC)</h3>
-                <p class="text-xs text-slate-500 mt-0.5">3-Tier Security Architecture: 1. Create Permissions (View/Add/Update/Delete) → 2. Assign Permissions to Role → 3. Assign Role to User</p>
+                <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Granular Role-Based Access Control (RBAC)</h3>
+                <p class="text-xs text-slate-500 mt-0.5">1. Create Permissions (View/Add/Update/Delete) → 2. Assign to Role → 3. Assign Role to User</p>
               </div>
-              <div class="flex gap-2 text-xs font-bold">
+              <div class="flex flex-wrap gap-2 text-xs font-bold">
                 <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700">Revoke All</span>
                 <span class="px-3 py-1.5 rounded-lg bg-emerald-50 text-brand-emerald border border-emerald-200">✓ Grant All</span>
                 <span class="px-3.5 py-1.5 rounded-lg bg-brand-emerald text-white">+ Create Permission</span>
               </div>
             </div>
 
-            <div class="grid lg:grid-cols-12 gap-6">
-              <!-- Left Column: Step 1 - Permission Matrix (VIEW / ADD / UPDATE / DELETE) -->
-              <div class="lg:col-span-7 border border-slate-200 rounded-xl p-4">
-                <div class="flex items-center justify-between mb-3">
-                  <span class="text-xs font-extrabold uppercase tracking-wider text-brand-emerald">Step 1: Create Permission Matrix</span>
-                  <span class="text-[11px] font-mono text-slate-400">Permission: "Inventory & Queue Lead"</span>
+            <div class="grid lg:grid-cols-12 gap-5">
+              <!-- Left Column: Step 1 - Permission Matrix -->
+              <div class="lg:col-span-7 border border-slate-200 rounded-xl p-3.5 sm:p-4 min-w-0">
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                  <span class="text-xs font-extrabold uppercase tracking-wider text-brand-emerald">Step 1: Permission Matrix</span>
+                  <span class="text-[11px] font-mono text-slate-400">Permission: "Inventory &amp; Queue Lead"</span>
                 </div>
-                <table class="w-full text-left border-collapse text-xs">
-                  <thead>
-                    <tr class="border-b border-slate-200 text-[10px] font-bold text-slate-400 uppercase">
-                      <th class="py-2">Module / Action</th>
-                      <th class="py-2 text-center">View</th>
-                      <th class="py-2 text-center">Add</th>
-                      <th class="py-2 text-center">Update</th>
-                      <th class="py-2 text-center">Delete</th>
-                    </tr>
-                  </thead>
-                  <tbody class="divide-y divide-slate-100">
-                    <tr>
-                      <td class="py-2.5 font-bold text-slate-800">▾ Inventory <span class="text-[10px] font-mono bg-slate-100 px-1.5 py-0.5 rounded text-slate-500">3/16</span></td>
-                      <td class="py-2.5 text-center"><span class="inline-block w-7 h-4 rounded-full bg-brand-emerald"></span></td>
-                      <td class="py-2.5 text-center"><span class="inline-block w-7 h-4 rounded-full bg-brand-emerald"></span></td>
-                      <td class="py-2.5 text-center"><span class="inline-block w-7 h-4 rounded-full bg-brand-emerald"></span></td>
-                      <td class="py-2.5 text-center"><span class="inline-block w-7 h-4 rounded-full bg-slate-200"></span></td>
-                    </tr>
-                    <tr class="bg-slate-50/50">
-                      <td class="py-2 pl-5 text-slate-600">↳ Manage Product &amp; ERP SKU Requests</td>
-                      <td class="py-2 text-center"><span class="inline-block w-7 h-4 rounded-full bg-brand-emerald"></span></td>
-                      <td class="py-2 text-center"><span class="inline-block w-7 h-4 rounded-full bg-brand-emerald"></span></td>
-                      <td class="py-2 text-center"><span class="inline-block w-7 h-4 rounded-full bg-brand-emerald"></span></td>
-                      <td class="py-2 text-center"><span class="inline-block w-7 h-4 rounded-full bg-slate-200"></span></td>
-                    </tr>
-                    <tr>
-                      <td class="py-2.5 font-bold text-slate-800">▾ Manage Data <span class="text-[10px] font-mono bg-slate-100 px-1.5 py-0.5 rounded text-slate-500">4/20</span></td>
-                      <td class="py-2.5 text-center"><span class="inline-block w-7 h-4 rounded-full bg-brand-emerald"></span></td>
-                      <td class="py-2.5 text-center"><span class="inline-block w-7 h-4 rounded-full bg-slate-200"></span></td>
-                      <td class="py-2.5 text-center"><span class="inline-block w-7 h-4 rounded-full bg-brand-emerald"></span></td>
-                      <td class="py-2.5 text-center"><span class="inline-block w-7 h-4 rounded-full bg-slate-200"></span></td>
-                    </tr>
-                    <tr class="bg-slate-50/50">
-                      <td class="py-2 pl-5 text-slate-600">↳ Categories, Branches &amp; Serviceable Locations</td>
-                      <td class="py-2 text-center"><span class="inline-block w-7 h-4 rounded-full bg-brand-emerald"></span></td>
-                      <td class="py-2 text-center"><span class="inline-block w-7 h-4 rounded-full bg-slate-200"></span></td>
-                      <td class="py-2 text-center"><span class="inline-block w-7 h-4 rounded-full bg-brand-emerald"></span></td>
-                      <td class="py-2 text-center"><span class="inline-block w-7 h-4 rounded-full bg-slate-200"></span></td>
-                    </tr>
-                    <tr>
-                      <td class="py-2.5 font-bold text-slate-800">▾ CRM Modules <span class="text-[10px] font-mono bg-slate-100 px-1.5 py-0.5 rounded text-slate-500">12/60</span></td>
-                      <td class="py-2.5 text-center"><span class="inline-block w-7 h-4 rounded-full bg-brand-emerald"></span></td>
-                      <td class="py-2.5 text-center"><span class="inline-block w-7 h-4 rounded-full bg-brand-emerald"></span></td>
-                      <td class="py-2.5 text-center"><span class="inline-block w-7 h-4 rounded-full bg-brand-emerald"></span></td>
-                      <td class="py-2.5 text-center"><span class="inline-block w-7 h-4 rounded-full bg-slate-200"></span></td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="table-scroll-wrapper">
+                  <table class="w-full min-w-[460px] text-left border-collapse text-xs">
+                    <thead>
+                      <tr class="border-b border-slate-200 text-[10px] font-bold text-slate-400 uppercase">
+                        <th class="py-2 pr-2">Module / Action</th>
+                        <th class="py-2 px-2 text-center">View</th>
+                        <th class="py-2 px-2 text-center">Add</th>
+                        <th class="py-2 px-2 text-center">Update</th>
+                        <th class="py-2 px-2 text-center">Delete</th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                      <tr>
+                        <td class="py-2.5 pr-2 font-bold text-slate-800">▾ Inventory <span class="text-[10px] font-mono bg-slate-100 px-1.5 py-0.5 rounded text-slate-500">3/16</span></td>
+                        <td class="py-2.5 px-2 text-center"><span class="inline-block w-7 h-4 rounded-full bg-brand-emerald"></span></td>
+                        <td class="py-2.5 px-2 text-center"><span class="inline-block w-7 h-4 rounded-full bg-brand-emerald"></span></td>
+                        <td class="py-2.5 px-2 text-center"><span class="inline-block w-7 h-4 rounded-full bg-brand-emerald"></span></td>
+                        <td class="py-2.5 px-2 text-center"><span class="inline-block w-7 h-4 rounded-full bg-slate-200"></span></td>
+                      </tr>
+                      <tr class="bg-slate-50/50">
+                        <td class="py-2 pl-4 pr-2 text-slate-600">↳ Manage Product &amp; ERP SKU Requests</td>
+                        <td class="py-2 px-2 text-center"><span class="inline-block w-7 h-4 rounded-full bg-brand-emerald"></span></td>
+                        <td class="py-2 px-2 text-center"><span class="inline-block w-7 h-4 rounded-full bg-brand-emerald"></span></td>
+                        <td class="py-2 px-2 text-center"><span class="inline-block w-7 h-4 rounded-full bg-brand-emerald"></span></td>
+                        <td class="py-2 px-2 text-center"><span class="inline-block w-7 h-4 rounded-full bg-slate-200"></span></td>
+                      </tr>
+                      <tr>
+                        <td class="py-2.5 pr-2 font-bold text-slate-800">▾ CRM Modules <span class="text-[10px] font-mono bg-slate-100 px-1.5 py-0.5 rounded text-slate-500">12/60</span></td>
+                        <td class="py-2.5 px-2 text-center"><span class="inline-block w-7 h-4 rounded-full bg-brand-emerald"></span></td>
+                        <td class="py-2.5 px-2 text-center"><span class="inline-block w-7 h-4 rounded-full bg-brand-emerald"></span></td>
+                        <td class="py-2.5 px-2 text-center"><span class="inline-block w-7 h-4 rounded-full bg-brand-emerald"></span></td>
+                        <td class="py-2.5 px-2 text-center"><span class="inline-block w-7 h-4 rounded-full bg-slate-200"></span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
 
-              <!-- Right Column: Step 2 (Assign Permission to Role) & Step 3 (Assign Role to User) -->
+              <!-- Right Column: Step 2 & Step 3 -->
               <div class="lg:col-span-5 space-y-4">
-                <!-- Step 2 Card -->
                 <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/60">
                   <div class="text-xs font-extrabold uppercase tracking-wider text-brand-emerald mb-2">Step 2: Create Role &amp; Attach Permissions</div>
-                  <div class="text-xs font-bold text-slate-800 mb-2">Role Name: <span class="font-mono bg-white px-2 py-0.5 rounded border border-slate-200">Regional Hub Supervisor</span></div>
+                  <div class="text-xs font-bold text-slate-800 mb-2">Role: <span class="font-mono bg-white px-2 py-0.5 rounded border border-slate-200">Regional Hub Supervisor</span></div>
                   <div class="space-y-1.5 text-xs">
                     <label class="flex items-center gap-2 p-2 rounded bg-white border border-emerald-300 font-semibold text-slate-800">
                       <input type="checkbox" checked disabled class="accent-brand-emerald" /> 🛡️ Sales &amp; Queue Management
@@ -854,71 +819,61 @@
                     <label class="flex items-center gap-2 p-2 rounded bg-white border border-emerald-300 font-semibold text-slate-800">
                       <input type="checkbox" checked disabled class="accent-brand-emerald" /> 🛡️ ERP Transition Recovery Access
                     </label>
-                    <label class="flex items-center gap-2 p-2 rounded bg-white border border-slate-200 text-slate-500">
-                      <input type="checkbox" disabled /> 🛡️ Full Super Admin System Access
-                    </label>
                   </div>
                 </div>
 
-                <!-- Step 3 Card -->
                 <div class="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-sm">
                   <div class="bg-brand-emerald text-white px-4 py-2.5 flex items-center justify-between">
-                    <span class="text-xs font-bold">Step 3: Assign Role to User / Admin</span>
-                    <span class="text-[10px] font-mono bg-white/20 px-2 py-0.5 rounded">Modal View</span>
+                    <span class="text-xs font-bold">Step 3: Assign Role to User</span>
+                    <span class="text-[10px] font-mono bg-white/20 px-2 py-0.5 rounded">Modal</span>
                   </div>
-                  <div class="p-4 space-y-2.5 text-xs">
+                  <div class="p-3.5 space-y-2 text-xs">
                     <div class="grid grid-cols-2 gap-2">
                       <div class="p-2 rounded border border-slate-200 bg-slate-50"><strong>First:</strong> Vikram</div>
                       <div class="p-2 rounded border border-slate-200 bg-slate-50"><strong>Last:</strong> Khanna</div>
                     </div>
-                    <div class="p-2 rounded border border-slate-200 bg-slate-50"><strong>Assigned Roles:</strong> <span class="text-brand-emerald font-bold">✓ Regional Hub Supervisor, ✓ Queue Auditor</span></div>
+                    <div class="p-2 rounded border border-slate-200 bg-slate-50"><strong>Roles:</strong> <span class="text-brand-emerald font-bold">✓ Hub Supervisor, ✓ Queue Auditor</span></div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- SCREEN 5: SYSTEM SETTINGS ENGINE (CHECKOUT, WALLET, TIMERS, SESSIONS, JOBS) -->
-          <div id="screen-settings" class="crm-screen hidden space-y-5">
-            <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-100 pb-4">
+          <!-- SCREEN 5: SYSTEM SETTINGS ENGINE -->
+          <div id="screen-settings" class="crm-screen hidden space-y-4 sm:space-y-5">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
               <div>
-                <h3 class="text-xl font-extrabold text-slate-900">Live System Settings &amp; Rule Configurator</h3>
-                <p class="text-xs text-slate-500 mt-0.5">Changes take effect within 60 seconds across Website, App, and Agent CRM without code deployments</p>
+                <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Live System Settings &amp; Rule Configurator</h3>
+                <p class="text-xs text-slate-500 mt-0.5">Changes take effect within 60 seconds across Website, App, and Agent CRM</p>
               </div>
-              <button class="px-4 py-2 rounded-lg bg-brand-emerald text-white text-xs font-bold shadow-sm">💾 Save All Changes</button>
+              <button class="self-start sm:self-auto px-4 py-2 rounded-lg bg-brand-emerald text-white text-xs font-bold shadow-sm">💾 Save All Changes</button>
             </div>
 
-            <div class="grid lg:grid-cols-12 gap-6">
-              <!-- Settings Sub-Navigation -->
-              <div class="lg:col-span-3 space-y-1.5 text-xs font-bold">
-                <div class="px-3.5 py-2.5 rounded-lg bg-brand-emerald text-white flex items-center gap-2">
+            <div class="grid lg:grid-cols-12 gap-5">
+              <div class="lg:col-span-3 flex lg:flex-col overflow-x-auto no-scrollbar gap-1.5 text-xs font-bold pb-1">
+                <div class="shrink-0 px-3.5 py-2.5 rounded-lg bg-brand-emerald text-white flex items-center gap-2">
                   <i data-lucide="truck" class="w-4 h-4"></i> Checkout &amp; Delivery
                 </div>
-                <div class="px-3.5 py-2.5 rounded-lg bg-emerald-50 text-brand-emerald border border-emerald-200 flex items-center gap-2">
+                <div class="shrink-0 px-3.5 py-2.5 rounded-lg bg-emerald-50 text-brand-emerald border border-emerald-200 flex items-center gap-2">
                   <i data-lucide="wallet" class="w-4 h-4"></i> Wallet &amp; Credits
                 </div>
-                <div class="px-3.5 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 flex items-center gap-2">
-                  <i data-lucide="timer" class="w-4 h-4"></i> Lead Queue &amp; Timers
+                <div class="shrink-0 px-3.5 py-2.5 rounded-lg text-slate-600 bg-slate-50 flex items-center gap-2">
+                  <i data-lucide="timer" class="w-4 h-4"></i> Lead Queue Timers
                 </div>
-                <div class="px-3.5 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 flex items-center gap-2">
+                <div class="shrink-0 px-3.5 py-2.5 rounded-lg text-slate-600 bg-slate-50 flex items-center gap-2">
                   <i data-lucide="clock" class="w-4 h-4"></i> Sessions &amp; Presence
-                </div>
-                <div class="px-3.5 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 flex items-center gap-2">
-                  <i data-lucide="refresh-cw" class="w-4 h-4"></i> Background Jobs
                 </div>
               </div>
 
-              <!-- Settings Controls -->
               <div class="lg:col-span-9 grid sm:grid-cols-2 gap-4 text-xs">
-                <!-- Checkout & Delivery Card -->
                 <div class="border border-slate-200 rounded-xl p-4 space-y-3.5">
                   <div class="font-extrabold text-slate-900 text-sm border-b border-slate-100 pb-2">Checkout &amp; Delivery Rules</div>
-                  <div class="flex items-center justify-between">
+                  <div class="flex items-center justify-between gap-2">
                     <div>
                       <div class="font-bold text-slate-800">Free Delivery Above Threshold</div>
-                      <div class="text-[11px] text-slate-500">Orders at or above threshold ship free</div>
+                      <div class="text-[11px] text-slate-500">Orders at/above threshold ship free</div>
                     </div>
-                    <span class="px-2.5 py-1 rounded-full bg-brand-emerald text-white font-bold text-[10px]">ON</span>
+                    <span class="px-2.5 py-1 rounded-full bg-brand-emerald text-white font-bold text-[10px] shrink-0">ON</span>
                   </div>
                   <div class="flex items-center justify-between">
                     <span class="font-semibold text-slate-700">Free Delivery Threshold (₹)</span>
@@ -928,19 +883,10 @@
                     <span class="font-semibold text-slate-700">Standard Delivery Fee (₹)</span>
                     <span class="font-mono font-bold px-3 py-1.5 rounded border border-slate-300 bg-slate-50">₹ 28</span>
                   </div>
-                  <div class="flex items-center justify-between">
-                    <span class="font-semibold text-slate-700">Flat Handling Charge (₹)</span>
-                    <span class="font-mono font-bold px-3 py-1.5 rounded border border-slate-300 bg-slate-50">₹ 0</span>
-                  </div>
                 </div>
 
-                <!-- Wallet & Queue Timer Card -->
                 <div class="border border-slate-200 rounded-xl p-4 space-y-3.5">
                   <div class="font-extrabold text-slate-900 text-sm border-b border-slate-100 pb-2">Wallet &amp; Queue Timer Guardrails</div>
-                  <div class="flex items-center justify-between">
-                    <span class="font-semibold text-slate-700">Wallet Min Order Value (₹)</span>
-                    <span class="font-mono font-bold px-3 py-1.5 rounded border border-slate-300 bg-slate-50">₹ 0</span>
-                  </div>
                   <div class="flex items-center justify-between">
                     <span class="font-semibold text-slate-700">Wallet Max % Per Order</span>
                     <span class="font-mono font-bold px-3 py-1.5 rounded border border-slate-300 bg-slate-50">100 %</span>
@@ -959,156 +905,153 @@
           </div>
 
           <!-- SCREEN 6: ORDER TRANSITION FAILED -->
-          <div id="screen-failed" class="crm-screen hidden space-y-5">
-            <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-100 pb-4">
+          <div id="screen-failed" class="crm-screen hidden space-y-4 sm:space-y-5">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
               <div>
                 <div class="flex items-center gap-2">
                   <span class="text-amber-500 font-bold">⚠️</span>
-                  <h3 class="text-xl font-extrabold text-slate-900">Order Transition Failed</h3>
+                  <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Order Transition Failed</h3>
                 </div>
                 <p class="text-xs text-slate-500 mt-0.5">
-                  Orders placed in CRM that the client ERP has not accepted • <span class="text-rose-600 font-bold">24 rejected</span> • <span class="text-amber-600 font-bold">0 not sent</span>
+                  Orders placed in CRM that the client ERP rejected • <span class="text-rose-600 font-bold">24 rejected</span>
                 </p>
               </div>
-              <button class="px-4 py-2 rounded-lg bg-brand-emerald text-white text-xs font-bold flex items-center gap-2 shadow-sm">
+              <button class="self-start sm:self-auto px-4 py-2 rounded-lg bg-brand-emerald text-white text-xs font-bold flex items-center gap-2 shadow-sm">
                 <i data-lucide="rotate-cw" class="w-4 h-4"></i> Re-sync all to ERP
               </button>
             </div>
 
-            <table class="w-full text-left border-collapse text-xs">
-              <thead>
-                <tr class="border-b border-slate-200 text-[11px] font-bold text-slate-400 uppercase">
-                  <th class="py-3 px-2">Order ID</th>
-                  <th class="py-3 px-2">Customer</th>
-                  <th class="py-3 px-2">Placed By</th>
-                  <th class="py-3 px-2">Amount</th>
-                  <th class="py-3 px-2">Why It Failed</th>
-                  <th class="py-3 px-2">Attempts</th>
-                  <th class="py-3 px-2 text-right">Action</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-slate-100">
-                <tr>
-                  <td class="py-3.5 px-2 font-mono font-bold">ORD-00006065 <span class="block text-[10px] text-slate-400 font-sans">Order Confirmed</span></td>
-                  <td class="py-3.5 px-2 font-bold">APEX ENTERPRISES <span class="block text-[10px] font-mono text-slate-400">98200XXXXX</span></td>
-                  <td class="py-3.5 px-2">Aadil Mansuri <span class="block text-[10px] bg-slate-100 px-1.5 py-0.5 rounded inline-block mt-0.5">Manual Orders</span></td>
-                  <td class="py-3.5 px-2 font-bold">₹906 <span class="block text-[10px] font-normal text-slate-400">2 items</span></td>
-                  <td class="py-3.5 px-2">
-                    <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-rose-50 text-rose-700 font-bold text-[11px] border border-rose-200">
-                      ✕ Rejected by ERP
-                    </span>
-                    <span class="block text-[11px] text-slate-500 mt-1">No ERP item code for: SKU-AFOGLIP-500 (No matching item)</span>
-                  </td>
-                  <td class="py-3.5 px-2 font-mono font-bold">1</td>
-                  <td class="py-3.5 px-2 text-right space-x-1.5">
-                    <span class="px-2.5 py-1.5 rounded border border-slate-200 font-semibold text-slate-700 inline-block">Open order</span>
-                    <span class="px-3 py-1.5 rounded bg-brand-emerald text-white font-bold inline-block">Re-sync to ERP</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="py-3.5 px-2 font-mono font-bold">ORD-00006026 <span class="block text-[10px] text-slate-400 font-sans">Order Confirmed</span></td>
-                  <td class="py-3.5 px-2 font-bold">HARISH MENON <span class="block text-[10px] font-mono text-slate-400">98338XXXXX</span></td>
-                  <td class="py-3.5 px-2">Uzma Khan <span class="block text-[10px] bg-slate-100 px-1.5 py-0.5 rounded inline-block mt-0.5">Manual Orders</span></td>
-                  <td class="py-3.5 px-2 font-bold">₹3,962 <span class="block text-[10px] font-normal text-slate-400">8 items</span></td>
-                  <td class="py-3.5 px-2">
-                    <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-rose-50 text-rose-700 font-bold text-[11px] border border-rose-200">
-                      ✕ Rejected by ERP
-                    </span>
-                    <span class="block text-[11px] text-slate-500 mt-1">ERP responded with warehouse stock lock timeout</span>
-                  </td>
-                  <td class="py-3.5 px-2 font-mono font-bold">2</td>
-                  <td class="py-3.5 px-2 text-right space-x-1.5">
-                    <span class="px-2.5 py-1.5 rounded border border-slate-200 font-semibold text-slate-700 inline-block">Open order</span>
-                    <span class="px-3 py-1.5 rounded bg-brand-emerald text-white font-bold inline-block">Re-sync to ERP</span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="table-scroll-wrapper border border-slate-100 rounded-xl">
+              <table class="w-full min-w-[680px] text-left border-collapse text-xs">
+                <thead>
+                  <tr class="border-b border-slate-200 bg-slate-50/70 text-[11px] font-bold text-slate-400 uppercase">
+                    <th class="py-3 px-3">Order ID</th>
+                    <th class="py-3 px-3">Customer</th>
+                    <th class="py-3 px-3">Placed By</th>
+                    <th class="py-3 px-3">Amount</th>
+                    <th class="py-3 px-3">Why It Failed</th>
+                    <th class="py-3 px-3">Attempts</th>
+                    <th class="py-3 px-3 text-right">Action</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                  <tr>
+                    <td class="py-3.5 px-3 font-mono font-bold">ORD-00006065</td>
+                    <td class="py-3.5 px-3 font-bold">APEX ENTERPRISES</td>
+                    <td class="py-3.5 px-3">Aadil Mansuri</td>
+                    <td class="py-3.5 px-3 font-bold">₹906</td>
+                    <td class="py-3.5 px-3">
+                      <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-rose-50 text-rose-700 font-bold text-[11px] border border-rose-200">✕ Rejected by ERP</span>
+                      <span class="block text-[11px] text-slate-500 mt-1">No ERP item code for: SKU-AFOGLIP-500</span>
+                    </td>
+                    <td class="py-3.5 px-3 font-mono font-bold">1</td>
+                    <td class="py-3.5 px-3 text-right">
+                      <span class="px-3 py-1.5 rounded bg-brand-emerald text-white font-bold inline-block">Re-sync to ERP</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="py-3.5 px-3 font-mono font-bold">ORD-00006026</td>
+                    <td class="py-3.5 px-3 font-bold">HARISH MENON</td>
+                    <td class="py-3.5 px-3">Uzma Khan</td>
+                    <td class="py-3.5 px-3 font-bold">₹3,962</td>
+                    <td class="py-3.5 px-3">
+                      <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-rose-50 text-rose-700 font-bold text-[11px] border border-rose-200">✕ Rejected by ERP</span>
+                      <span class="block text-[11px] text-slate-500 mt-1">ERP warehouse stock lock timeout</span>
+                    </td>
+                    <td class="py-3.5 px-3 font-mono font-bold">2</td>
+                    <td class="py-3.5 px-3 text-right">
+                      <span class="px-3 py-1.5 rounded bg-brand-emerald text-white font-bold inline-block">Re-sync to ERP</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
-          <!-- SCREEN 7: MANAGE AGENT CHANNELS & PRIORITY -->
-          <div id="screen-channels" class="crm-screen hidden space-y-5">
-            <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-100 pb-4">
+          <!-- SCREEN 7: MANAGE AGENT CHANNELS -->
+          <div id="screen-channels" class="crm-screen hidden space-y-4 sm:space-y-5">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
               <div>
-                <h3 class="text-xl font-extrabold text-slate-900">Manage Agent Channels</h3>
+                <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Manage Agent Channels</h3>
                 <p class="text-xs text-slate-500 mt-0.5">Assign and prioritize queue channel access — Web, Cart, Compliance/RX &amp; Inbound orders</p>
               </div>
-              <button class="px-4 py-2 rounded-lg bg-brand-emerald text-white text-xs font-bold">+ Assign Channel to Agent</button>
+              <button class="self-start sm:self-auto px-4 py-2 rounded-lg bg-brand-emerald text-white text-xs font-bold">+ Assign Channel to Agent</button>
             </div>
 
-            <table class="w-full text-left border-collapse text-xs">
-              <thead>
-                <tr class="border-b border-slate-200 text-[11px] font-bold text-slate-400 uppercase">
-                  <th class="py-3 px-2">Agent</th>
-                  <th class="py-3 px-2">Email</th>
-                  <th class="py-3 px-2">Channels (Priority Order 1 → 2 → 3)</th>
-                  <th class="py-3 px-2">Last Updated</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-slate-100">
-                <tr>
-                  <td class="py-3.5 px-2 font-bold text-slate-900">Aadil Mansuri</td>
-                  <td class="py-3.5 px-2 font-mono text-slate-500">aadil.m@nexusops.io</td>
-                  <td class="py-3.5 px-2 space-x-1.5">
-                    <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-brand-emerald font-bold border border-emerald-200">❶ Cart Orders</span>
-                    <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-brand-emerald font-bold border border-emerald-200">❷ Compliance/RX Orders</span>
-                    <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-brand-emerald font-bold border border-emerald-200">❸ Web Orders</span>
-                  </td>
-                  <td class="py-3.5 px-2 text-slate-500">20 Oct 2026 • Super Admin</td>
-                </tr>
-                <tr>
-                  <td class="py-3.5 px-2 font-bold text-slate-900">Simran Shaikh</td>
-                  <td class="py-3.5 px-2 font-mono text-slate-500">simran@nexusops.io</td>
-                  <td class="py-3.5 px-2 space-x-1.5">
-                    <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-brand-emerald font-bold border border-emerald-200">❶ Web Orders</span>
-                    <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-brand-emerald font-bold border border-emerald-200">❷ Compliance/RX Orders</span>
-                  </td>
-                  <td class="py-3.5 px-2 text-slate-500">20 Oct 2026 • Ops Lead</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="table-scroll-wrapper border border-slate-100 rounded-xl">
+              <table class="w-full min-w-[600px] text-left border-collapse text-xs">
+                <thead>
+                  <tr class="border-b border-slate-200 bg-slate-50/70 text-[11px] font-bold text-slate-400 uppercase">
+                    <th class="py-3 px-3">Agent</th>
+                    <th class="py-3 px-3">Email</th>
+                    <th class="py-3 px-3">Channels (Priority Order 1 → 2 → 3)</th>
+                    <th class="py-3 px-3">Last Updated</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                  <tr>
+                    <td class="py-3.5 px-3 font-bold text-slate-900">Aadil Mansuri</td>
+                    <td class="py-3.5 px-3 font-mono text-slate-500">aadil.m@nexusops.io</td>
+                    <td class="py-3.5 px-3 space-x-1">
+                      <span class="px-2 py-1 rounded-full bg-emerald-50 text-brand-emerald font-bold border border-emerald-200">❶ Cart Orders</span>
+                      <span class="px-2 py-1 rounded-full bg-emerald-50 text-brand-emerald font-bold border border-emerald-200">❷ Compliance/RX</span>
+                      <span class="px-2 py-1 rounded-full bg-emerald-50 text-brand-emerald font-bold border border-emerald-200">❸ Web Orders</span>
+                    </td>
+                    <td class="py-3.5 px-3 text-slate-500">20 Oct 2026</td>
+                  </tr>
+                  <tr>
+                    <td class="py-3.5 px-3 font-bold text-slate-900">Simran Shaikh</td>
+                    <td class="py-3.5 px-3 font-mono text-slate-500">simran@nexusops.io</td>
+                    <td class="py-3.5 px-3 space-x-1">
+                      <span class="px-2 py-1 rounded-full bg-emerald-50 text-brand-emerald font-bold border border-emerald-200">❶ Web Orders</span>
+                      <span class="px-2 py-1 rounded-full bg-emerald-50 text-brand-emerald font-bold border border-emerald-200">❷ Compliance/RX</span>
+                    </td>
+                    <td class="py-3.5 px-3 text-slate-500">20 Oct 2026</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
           <!-- SCREEN 8: COUPONS & VOUCHER ENGINE -->
-          <div id="screen-coupons" class="crm-screen hidden space-y-5">
-            <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-100 pb-4">
+          <div id="screen-coupons" class="crm-screen hidden space-y-4 sm:space-y-5">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
               <div>
-                <h3 class="text-xl font-extrabold text-slate-900">Coupons &amp; Single-Benefit Promo Rules</h3>
-                <p class="text-xs text-slate-500 mt-0.5">Prevent promo stacking: customers can apply either a Coupon Code, Referral Balance, or Promotional Discount</p>
+                <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Coupons &amp; Single-Benefit Promo Rules</h3>
+                <p class="text-xs text-slate-500 mt-0.5">Prevent promo stacking: customers can apply either a Coupon Code, Referral Balance, or Promo Discount</p>
               </div>
-              <button class="px-4 py-2 rounded-lg bg-brand-emerald text-white text-xs font-bold">+ Create Coupon</button>
+              <button class="self-start sm:self-auto px-4 py-2 rounded-lg bg-brand-emerald text-white text-xs font-bold">+ Create Coupon</button>
             </div>
 
-            <table class="w-full text-left border-collapse text-xs">
-              <thead>
-                <tr class="border-b border-slate-200 text-[11px] font-bold text-slate-400 uppercase">
-                  <th class="py-3 px-2">Code</th>
-                  <th class="py-3 px-2">Rule Logic</th>
-                  <th class="py-3 px-2">Discount</th>
-                  <th class="py-3 px-2">Auto Apply</th>
-                  <th class="py-3 px-2">Stackable</th>
-                  <th class="py-3 px-2">Status</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-slate-100">
-                <tr>
-                  <td class="py-3.5 px-2 font-mono font-bold text-slate-900">WELCOME50</td>
-                  <td class="py-3.5 px-2">New Customer + Order &gt; ₹500 + Preferred In-House Brand Item</td>
-                  <td class="py-3.5 px-2 font-bold text-emerald-700">Flat ₹50 OFF</td>
-                  <td class="py-3.5 px-2">Yes</td>
-                  <td class="py-3.5 px-2"><span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600 font-bold">No</span></td>
-                  <td class="py-3.5 px-2"><span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold">ACTIVE</span></td>
-                </tr>
-                <tr>
-                  <td class="py-3.5 px-2 font-mono font-bold text-slate-900">SAVE20</td>
-                  <td class="py-3.5 px-2">20% (max ₹200) on Private-Label / Substitute Line Items</td>
-                  <td class="py-3.5 px-2 font-bold text-emerald-700">20% (max ₹200)</td>
-                  <td class="py-3.5 px-2">No</td>
-                  <td class="py-3.5 px-2"><span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600 font-bold">No</span></td>
-                  <td class="py-3.5 px-2"><span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold">ACTIVE</span></td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="table-scroll-wrapper border border-slate-100 rounded-xl">
+              <table class="w-full min-w-[600px] text-left border-collapse text-xs">
+                <thead>
+                  <tr class="border-b border-slate-200 bg-slate-50/70 text-[11px] font-bold text-slate-400 uppercase">
+                    <th class="py-3 px-3">Code</th>
+                    <th class="py-3 px-3">Rule Logic</th>
+                    <th class="py-3 px-3">Discount</th>
+                    <th class="py-3 px-3">Stackable</th>
+                    <th class="py-3 px-3">Status</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                  <tr>
+                    <td class="py-3.5 px-3 font-mono font-bold text-slate-900">WELCOME50</td>
+                    <td class="py-3.5 px-3">New Customer + Order &gt; ₹500 + Preferred Brand Item</td>
+                    <td class="py-3.5 px-3 font-bold text-emerald-700">Flat ₹50 OFF</td>
+                    <td class="py-3.5 px-3"><span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600 font-bold">No</span></td>
+                    <td class="py-3.5 px-3"><span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold">ACTIVE</span></td>
+                  </tr>
+                  <tr>
+                    <td class="py-3.5 px-3 font-mono font-bold text-slate-900">SAVE20</td>
+                    <td class="py-3.5 px-3">20% (max ₹200) on Private-Label / Substitute Items</td>
+                    <td class="py-3.5 px-3 font-bold text-emerald-700">20% (max ₹200)</td>
+                    <td class="py-3.5 px-3"><span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600 font-bold">No</span></td>
+                    <td class="py-3.5 px-3"><span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold">ACTIVE</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
         </main>
@@ -1116,255 +1059,246 @@
     </div>
   </section>
 
-  <!-- 12 CORE PRODUCTION MODULES (INCLUDES RBAC, SESSION FORENSICS & SYSTEM SETTINGS) -->
-  <section id="core-modules" class="py-20 bg-white border-b border-slate-200">
+  <!-- 12 CORE PRODUCTION MODULES -->
+  <section id="core-modules" class="py-14 sm:py-20 bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
         <span class="text-xs font-bold uppercase tracking-widest text-brand-emerald bg-emerald-50 px-3 py-1 rounded-full">Complete Operational Architecture</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">
-          12 Battle-Tested Modules Ready to Deploy for Your Business
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-3">
+          12 Battle-Tested Modules Ready to Deploy
         </h2>
-        <p class="text-slate-600 mt-3">
+        <p class="text-slate-600 mt-2.5 text-sm sm:text-base">
           Every module below is already running under live call-center and warehouse loads—ready to be tailored to your domain.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="p-6 rounded-2xl border border-slate-200 hover:border-brand-emerald transition bg-slate-50/50">
-          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-brand-emerald flex items-center justify-center font-bold mb-4">01</div>
-          <h3 class="text-lg font-extrabold text-slate-900">My Queue &amp; 5-Min Cart Capture</h3>
-          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
-            Real-time Round-Robin lead assignment with a strict <strong>3-active-order capacity cap</strong> per agent. Captures abandoned carts after a 5-minute grace period so agents never interrupt customers mid-checkout.
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        <div class="p-5 sm:p-6 rounded-2xl border border-slate-200 hover:border-brand-emerald transition bg-slate-50/50">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-100 text-brand-emerald flex items-center justify-center font-bold mb-3.5">01</div>
+          <h3 class="text-base sm:text-lg font-extrabold text-slate-900">My Queue &amp; 5-Min Cart Capture</h3>
+          <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+            Real-time Round-Robin lead assignment with a strict <strong>3-active-order capacity cap</strong> per agent. Captures abandoned carts after a 5-minute grace period.
           </p>
         </div>
 
-        <div class="p-6 rounded-2xl border border-slate-200 hover:border-brand-emerald transition bg-slate-50/50">
-          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-brand-emerald flex items-center justify-center font-bold mb-4">02</div>
-          <h3 class="text-lg font-extrabold text-slate-900">Customer 360° One View</h3>
-          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
-            Single-screen workspace showing <strong>Open Orders</strong> (preventing duplicate orders), Online + Offline Store ERP bills, visual red-marked item returns, Credit Note ledgers, Referral Wallets, and Call History.
+        <div class="p-5 sm:p-6 rounded-2xl border border-slate-200 hover:border-brand-emerald transition bg-slate-50/50">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-100 text-brand-emerald flex items-center justify-center font-bold mb-3.5">02</div>
+          <h3 class="text-base sm:text-lg font-extrabold text-slate-900">Customer 360° One View</h3>
+          <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+            Single-screen workspace showing <strong>Open Orders</strong> (preventing duplicates), Online + Offline Store ERP bills, red-marked item returns, Credit Notes, Wallets, and Call Logs.
           </p>
         </div>
 
-        <div class="p-6 rounded-2xl border border-emerald-300 hover:border-brand-emerald transition bg-emerald-50/30">
-          <div class="w-10 h-10 rounded-xl bg-brand-emerald text-white flex items-center justify-center font-bold mb-4">03</div>
-          <h3 class="text-lg font-extrabold text-slate-900">Session-Level Agent Forensics</h3>
-          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
-            S3-archived session tracking for every agent login. Supervisors can inspect session duration, IP address, every <strong>Page Visited</strong>, exact <strong>Search Queries</strong> typed, and every <strong>Order/Cart Change</strong> made.
+        <div class="p-5 sm:p-6 rounded-2xl border border-emerald-300 hover:border-brand-emerald transition bg-emerald-50/30">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-brand-emerald text-white flex items-center justify-center font-bold mb-3.5">03</div>
+          <h3 class="text-base sm:text-lg font-extrabold text-slate-900">Session-Level Agent Forensics</h3>
+          <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+            S3-archived session tracking for every agent login. Supervisors inspect session duration, IP address, every <strong>Page Visited</strong>, exact <strong>Search Queries</strong>, and <strong>Order Changes</strong>.
           </p>
         </div>
 
-        <div class="p-6 rounded-2xl border border-emerald-300 hover:border-brand-emerald transition bg-emerald-50/30">
-          <div class="w-10 h-10 rounded-xl bg-brand-emerald text-white flex items-center justify-center font-bold mb-4">04</div>
-          <h3 class="text-lg font-extrabold text-slate-900">3-Tier Granular RBAC Engine</h3>
-          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
-            Zero-code access control: <strong>1) Create Permissions</strong> with granular View, Add, Update, and Delete toggles per module, <strong>2) Assign Permissions to Roles</strong>, and <strong>3) Assign Roles to Users</strong>.
+        <div class="p-5 sm:p-6 rounded-2xl border border-emerald-300 hover:border-brand-emerald transition bg-emerald-50/30">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-brand-emerald text-white flex items-center justify-center font-bold mb-3.5">04</div>
+          <h3 class="text-base sm:text-lg font-extrabold text-slate-900">3-Tier Granular RBAC Engine</h3>
+          <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+            Zero-code access control: <strong>1) Create Permissions</strong> with granular View, Add, Update, and Delete toggles, <strong>2) Assign Permissions to Roles</strong>, and <strong>3) Assign Roles to Users</strong>.
           </p>
         </div>
 
-        <div class="p-6 rounded-2xl border border-emerald-300 hover:border-brand-emerald transition bg-emerald-50/30">
-          <div class="w-10 h-10 rounded-xl bg-brand-emerald text-white flex items-center justify-center font-bold mb-4">05</div>
-          <h3 class="text-lg font-extrabold text-slate-900">Live System Settings Engine</h3>
-          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
-            Customize Free Delivery Thresholds, Delivery/Handling Fees, Wallet Min/Max Order % Caps, Lead Queue Timers, Session Presence, and Background Jobs—taking effect across the platform in 60 seconds.
+        <div class="p-5 sm:p-6 rounded-2xl border border-emerald-300 hover:border-brand-emerald transition bg-emerald-50/30">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-brand-emerald text-white flex items-center justify-center font-bold mb-3.5">05</div>
+          <h3 class="text-base sm:text-lg font-extrabold text-slate-900">Live System Settings Engine</h3>
+          <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+            Customize Free Delivery Thresholds, Delivery Fees, Wallet Caps, Lead Queue Timers, Session Presence, and Background Jobs—live across the platform in 60 seconds.
           </p>
         </div>
 
-        <div class="p-6 rounded-2xl border border-slate-200 hover:border-brand-emerald transition bg-slate-50/50">
-          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-brand-emerald flex items-center justify-center font-bold mb-4">06</div>
-          <h3 class="text-lg font-extrabold text-slate-900">Live Supervisor Telemetry</h3>
-          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
-            Track First Login, Last Logout, frequent Login/Logout toggling ratios, <strong>Agent Idle Time</strong> (no leads received/processed), and <strong>Lead Aging Time</strong> against SLA benchmarks in real time.
+        <div class="p-5 sm:p-6 rounded-2xl border border-slate-200 hover:border-brand-emerald transition bg-slate-50/50">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-100 text-brand-emerald flex items-center justify-center font-bold mb-3.5">06</div>
+          <h3 class="text-base sm:text-lg font-extrabold text-slate-900">Live Supervisor Telemetry</h3>
+          <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+            Track First Login, Last Logout, frequent Login/Logout toggling ratios, <strong>Agent Idle Time</strong>, and <strong>Lead Aging Time</strong> against SLA benchmarks in real time.
           </p>
         </div>
 
-        <div class="p-6 rounded-2xl border border-slate-200 hover:border-brand-emerald transition bg-slate-50/50">
-          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-brand-emerald flex items-center justify-center font-bold mb-4">07</div>
-          <h3 class="text-lg font-extrabold text-slate-900">Priority Waterfall &amp; Instant Callback</h3>
-          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
-            Route leads across <em>Unassigned</em>, <em>To Be Assigned</em> (auto-recovered when an agent logs out mid-lead), <em>Follow-Up</em>, <em>Cancelled Recovery Queue</em>, and urgent customer-triggered <strong>Instant Callbacks</strong>.
+        <div class="p-5 sm:p-6 rounded-2xl border border-slate-200 hover:border-brand-emerald transition bg-slate-50/50">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-100 text-brand-emerald flex items-center justify-center font-bold mb-3.5">07</div>
+          <h3 class="text-base sm:text-lg font-extrabold text-slate-900">Priority Waterfall &amp; Instant Callback</h3>
+          <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+            Route leads across <em>Unassigned</em>, <em>To Be Assigned</em> (auto-recovered on agent logout), <em>Follow-Up</em>, <em>Cancelled Recovery Queue</em>, and urgent <strong>Instant Callbacks</strong>.
           </p>
         </div>
 
-        <div class="p-6 rounded-2xl border border-slate-200 hover:border-brand-emerald transition bg-slate-50/50">
-          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-brand-emerald flex items-center justify-center font-bold mb-4">08</div>
-          <h3 class="text-lg font-extrabold text-slate-900">ERP Transition Failure Recovery</h3>
-          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
-            Never lose an order to an ERP timeout or unmapped SKU again. Failed transitions are isolated with exact ERP error logs and one-click single or bulk <strong>Re-sync to ERP</strong> recovery.
+        <div class="p-5 sm:p-6 rounded-2xl border border-slate-200 hover:border-brand-emerald transition bg-slate-50/50">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-100 text-brand-emerald flex items-center justify-center font-bold mb-3.5">08</div>
+          <h3 class="text-base sm:text-lg font-extrabold text-slate-900">ERP Transition Failure Recovery</h3>
+          <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+            Never lose an order to an ERP timeout or unmapped SKU again. Failed transitions are isolated with exact ERP error logs and one-click bulk <strong>Re-sync to ERP</strong>.
           </p>
         </div>
 
-        <div class="p-6 rounded-2xl border border-slate-200 hover:border-brand-emerald transition bg-slate-50/50">
-          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-brand-emerald flex items-center justify-center font-bold mb-4">09</div>
-          <h3 class="text-lg font-extrabold text-slate-900">Smart Substitute &amp; Upsell Engine</h3>
-          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
-            Auto-suggests higher-margin private-label substitutes, bulk quantity tier discounts (e.g., 3 units for +2% off), 1-click full past order reorders, and 30/60/90-day subscription reminders.
+        <div class="p-5 sm:p-6 rounded-2xl border border-slate-200 hover:border-brand-emerald transition bg-slate-50/50">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-100 text-brand-emerald flex items-center justify-center font-bold mb-3.5">09</div>
+          <h3 class="text-base sm:text-lg font-extrabold text-slate-900">Smart Substitute &amp; Upsell Engine</h3>
+          <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+            Auto-suggests higher-margin private-label substitutes, bulk quantity tier discounts, 1-click full past order reorders, and 30/60/90-day subscription reminders.
           </p>
         </div>
 
-        <div class="p-6 rounded-2xl border border-slate-200 hover:border-brand-emerald transition bg-slate-50/50">
-          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-brand-emerald flex items-center justify-center font-bold mb-4">10</div>
-          <h3 class="text-lg font-extrabold text-slate-900">Multi-Branch Slot &amp; Cutoff Engine</h3>
-          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
-            Validates live branch-wise stock and daily cutoff times (e.g., 12 PM cutoff for Same-Day 12–5 PM / 5–11 PM slots, or 7-day forward scheduling) and excludes Store Pickups from fleet routing.
+        <div class="p-5 sm:p-6 rounded-2xl border border-slate-200 hover:border-brand-emerald transition bg-slate-50/50">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-100 text-brand-emerald flex items-center justify-center font-bold mb-3.5">10</div>
+          <h3 class="text-base sm:text-lg font-extrabold text-slate-900">Multi-Branch Slot &amp; Cutoff Engine</h3>
+          <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+            Validates live branch-wise stock and daily cutoff times (Same-Day 12–5 PM / 5–11 PM slots, or 7-day forward scheduling) and excludes Store Pickups from fleet routing.
           </p>
         </div>
 
-        <div class="p-6 rounded-2xl border border-slate-200 hover:border-brand-emerald transition bg-slate-50/50">
-          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-brand-emerald flex items-center justify-center font-bold mb-4">11</div>
-          <h3 class="text-lg font-extrabold text-slate-900">5-Layer Order &amp; Cart Audit Logs</h3>
-          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
-            Every order maintains immutable <strong>Order Logs, Slot Logs, Cart Logs</strong> (tracking whether the Customer or Agent added/modified quantities), <strong>Live ERP Stock Status</strong>, and <strong>Queue Logs</strong>.
+        <div class="p-5 sm:p-6 rounded-2xl border border-slate-200 hover:border-brand-emerald transition bg-slate-50/50">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-100 text-brand-emerald flex items-center justify-center font-bold mb-3.5">11</div>
+          <h3 class="text-base sm:text-lg font-extrabold text-slate-900">5-Layer Order &amp; Cart Audit Logs</h3>
+          <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+            Every order maintains immutable <strong>Order Logs, Slot Logs, Cart Logs</strong> (tracking whether the Customer or Agent modified quantities), <strong>ERP Stock Status</strong>, and <strong>Queue Logs</strong>.
           </p>
         </div>
 
-        <div class="p-6 rounded-2xl border border-slate-200 hover:border-brand-emerald transition bg-slate-50/50">
-          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-brand-emerald flex items-center justify-center font-bold mb-4">12</div>
-          <h3 class="text-lg font-extrabold text-slate-900">SLA Support Ticketing System</h3>
-          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
-            Dedicated Support Dashboard with 2h/4h/24h/48h SLA breach alerts (1-hour warning), post-warehouse customer self-service ticket creation, and 1-click agent ticket escalation inside Order Details.
+        <div class="p-5 sm:p-6 rounded-2xl border border-slate-200 hover:border-brand-emerald transition bg-slate-50/50">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-100 text-brand-emerald flex items-center justify-center font-bold mb-3.5">12</div>
+          <h3 class="text-base sm:text-lg font-extrabold text-slate-900">SLA Support Ticketing System</h3>
+          <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+            Dedicated Support Dashboard with 2h/4h/24h/48h SLA breach alerts, post-warehouse customer self-service ticket creation, and 1-click agent ticket escalation.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TAILORED INTEGRATIONS SECTION (FIXED FLEX WRAP & UPDATED POSITIONING FOR TELEPHONY + CUSTOM ERP) -->
-  <section id="integrations" class="py-20 bg-slate-900 text-white">
+  <!-- TAILORED INTEGRATIONS SECTION -->
+  <section id="integrations" class="py-14 sm:py-20 bg-slate-900 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-14">
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
         <span class="text-xs font-mono uppercase tracking-widest text-emerald-400">Custom-Engineered Integrations</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold mt-2">
+        <h2 class="text-2xl sm:text-4xl font-extrabold mt-2">
           Seamless Integration With 3rd-Party Click-to-Call, WhatsApp &amp; Whatever ERP You Run
         </h2>
-        <p class="text-slate-300 mt-3">
+        <p class="text-slate-300 mt-2.5 text-sm sm:text-base">
           We don't force you to switch your telephony provider or accounting backbone. We wire our CRM directly into your existing stack.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- 3rd Party Click to Call Telephony -->
-        <div class="bg-slate-800/70 border border-slate-700 rounded-2xl p-7 flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-5">
-              <i data-lucide="phone-forwarded" class="w-6 h-6"></i>
-            </div>
-            <h3 class="text-xl font-bold mb-2">3rd-Party Click-to-Call Integration</h3>
-            <p class="text-xs text-emerald-400 font-mono mb-4">Bring Your Own Provider or Use Our Partnered Setup</p>
-            <ul class="space-y-3 text-sm text-slate-300">
-              <li class="flex items-start gap-2.5">
-                <span class="text-emerald-400 font-bold shrink-0">✓</span>
-                <div>1-Click outbound calling directly from My Queue &amp; Customer One View via third-party cloud telephony bridges.</div>
-              </li>
-              <li class="flex items-start gap-2.5">
-                <span class="text-emerald-400 font-bold shrink-0">✓</span>
-                <div>Auto-populates customer profile and open orders on inbound caller ID match.</div>
-              </li>
-              <li class="flex items-start gap-2.5">
-                <span class="text-emerald-400 font-bold shrink-0">✓</span>
-                <div>Automated call disposition logging (Connected, RNR, Busy, Failed) and agent-wise call counts.</div>
-              </li>
-            </ul>
+      <div class="grid md:grid-cols-3 gap-6 sm:gap-8">
+        <div class="bg-slate-800/70 border border-slate-700 rounded-2xl p-6 sm:p-7">
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-4">
+            <i data-lucide="phone-forwarded" class="w-6 h-6"></i>
           </div>
+          <h3 class="text-lg sm:text-xl font-bold mb-1.5">3rd-Party Click-to-Call Integration</h3>
+          <p class="text-xs text-emerald-400 font-mono mb-4">Bring Your Own Provider or Use Our Partnered Setup</p>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-300">
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-400 font-bold shrink-0">✓</span>
+              <div>1-Click outbound calling directly from My Queue &amp; Customer One View via third-party cloud telephony bridges.</div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-400 font-bold shrink-0">✓</span>
+              <div>Auto-populates customer profile and open orders on inbound caller ID match.</div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-400 font-bold shrink-0">✓</span>
+              <div>Automated call disposition logging (Connected, RNR, Busy, Failed) and agent-wise call counts.</div>
+            </li>
+          </ul>
         </div>
 
-        <!-- WhatsApp -->
-        <div class="bg-slate-800/70 border border-slate-700 rounded-2xl p-7 flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-xl bg-green-500/20 text-green-400 flex items-center justify-center mb-5">
-              <i data-lucide="message-square-more" class="w-6 h-6"></i>
-            </div>
-            <h3 class="text-xl font-bold mb-2">WhatsApp Business (WABA)</h3>
-            <p class="text-xs text-green-400 font-mono mb-4">Conversational &amp; Campaign Order Engine</p>
-            <ul class="space-y-3 text-sm text-slate-300">
-              <li class="flex items-start gap-2.5">
-                <span class="text-emerald-400 font-bold shrink-0">✓</span>
-                <div>Capture both conversational WABA agent orders and direct WABA App campaign link orders.</div>
-              </li>
-              <li class="flex items-start gap-2.5">
-                <span class="text-emerald-400 font-bold shrink-0">✓</span>
-                <div>Automated 30/60/90-day refill &amp; subscription reminders dispatched over WhatsApp.</div>
-              </li>
-              <li class="flex items-start gap-2.5">
-                <span class="text-emerald-400 font-bold shrink-0">✓</span>
-                <div>Instant Callback trigger links sent automatically when a customer misses an order confirmation call.</div>
-              </li>
-            </ul>
+        <div class="bg-slate-800/70 border border-slate-700 rounded-2xl p-6 sm:p-7">
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-green-500/20 text-green-400 flex items-center justify-center mb-4">
+            <i data-lucide="message-square-more" class="w-6 h-6"></i>
           </div>
+          <h3 class="text-lg sm:text-xl font-bold mb-1.5">WhatsApp Business (WABA)</h3>
+          <p class="text-xs text-green-400 font-mono mb-4">Conversational &amp; Campaign Order Engine</p>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-300">
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-400 font-bold shrink-0">✓</span>
+              <div>Capture both conversational WABA agent orders and direct WABA App campaign link orders.</div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-400 font-bold shrink-0">✓</span>
+              <div>Automated 30/60/90-day refill &amp; subscription reminders dispatched over WhatsApp.</div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-400 font-bold shrink-0">✓</span>
+              <div>Instant Callback trigger links sent automatically when a customer misses an order confirmation call.</div>
+            </li>
+          </ul>
         </div>
 
-        <!-- Custom ERP Integration (Fixed text wrapping bug!) -->
-        <div class="bg-slate-800/70 border border-slate-700 rounded-2xl p-7 flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center mb-5">
-              <i data-lucide="server-cog" class="w-6 h-6"></i>
-            </div>
-            <h3 class="text-xl font-bold mb-2">Custom Integration to Your ERP</h3>
-            <p class="text-xs text-amber-400 font-mono mb-4">Tailored to SAP, Tally, Dynamics, Medica or Custom ERPs</p>
-            <ul class="space-y-3 text-sm text-slate-300">
-              <li class="flex items-start gap-2.5">
-                <span class="text-emerald-400 font-bold shrink-0">✓</span>
-                <div>We custom-build bi-directional adapters for your existing ERP to handle multi-branch stock checks and invoice generation.</div>
-              </li>
-              <li class="flex items-start gap-2.5">
-                <span class="text-emerald-400 font-bold shrink-0">✓</span>
-                <div>Syncs dual notes: Internal <span class="italic text-white">Order Comments</span> (CRM-only) vs. <span class="italic text-white">Store Comments</span> (pushed directly to your ERP warehouse &amp; billing teams).</div>
-              </li>
-              <li class="flex items-start gap-2.5">
-                <span class="text-emerald-400 font-bold shrink-0">✓</span>
-                <div>Synchronizes live Credit Notes, approved item returns, and offline physical store purchases.</div>
-              </li>
-            </ul>
+        <div class="bg-slate-800/70 border border-slate-700 rounded-2xl p-6 sm:p-7">
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center mb-4">
+            <i data-lucide="server-cog" class="w-6 h-6"></i>
           </div>
+          <h3 class="text-lg sm:text-xl font-bold mb-1.5">Custom Integration to Your ERP</h3>
+          <p class="text-xs text-amber-400 font-mono mb-4">Tailored to SAP, Tally, Dynamics, Medica or Custom ERPs</p>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-300">
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-400 font-bold shrink-0">✓</span>
+              <div>We custom-build bi-directional adapters for your existing ERP to handle multi-branch stock checks and invoice generation.</div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-400 font-bold shrink-0">✓</span>
+              <div>Syncs dual notes: Internal <span class="italic text-white">Order Comments</span> (CRM-only) vs. <span class="italic text-white">Store Comments</span> (pushed directly to your ERP warehouse &amp; billing teams).</div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-400 font-bold shrink-0">✓</span>
+              <div>Synchronizes live Credit Notes, approved item returns, and offline physical store purchases.</div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- GEO COMPARISON TABLE: CUSTOM NEXUSOPS VS GENERIC SAAS CRMS -->
-  <section id="comparison" class="py-20 bg-white border-b border-slate-200">
+  <!-- GEO COMPARISON TABLE -->
+  <section id="comparison" class="py-14 sm:py-20 bg-white border-b border-slate-200">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-12">
+      <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
         <span class="text-xs font-bold uppercase tracking-widest text-brand-emerald bg-emerald-50 px-3 py-1 rounded-full">Architectural Comparison</span>
-        <h2 class="text-3xl font-extrabold text-slate-900 mt-3">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-3">
           Why High-Volume Teams Replace Generic SaaS CRMs With NexusOps
         </h2>
       </div>
 
-      <div class="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm">
-        <table class="w-full text-left border-collapse text-sm">
+      <div class="table-scroll-wrapper rounded-2xl border border-slate-200 shadow-sm">
+        <table class="w-full min-w-[640px] text-left border-collapse text-xs sm:text-sm">
           <thead>
             <tr class="bg-slate-900 text-white">
-              <th class="py-4 px-5 font-bold">Operational Requirement</th>
-              <th class="py-4 px-5 font-bold text-emerald-400">NexusOps Custom CRM</th>
-              <th class="py-4 px-5 font-bold text-slate-400">Generic SaaS CRM (Zoho / HubSpot / Freshsales)</th>
+              <th class="py-3.5 px-4 sm:px-5 font-bold">Operational Requirement</th>
+              <th class="py-3.5 px-4 sm:px-5 font-bold text-emerald-400">NexusOps Custom CRM</th>
+              <th class="py-3.5 px-4 sm:px-5 font-bold text-slate-400">Generic SaaS CRM (Zoho / HubSpot / Freshsales)</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-200">
             <tr class="bg-white">
-              <td class="py-4 px-5 font-bold text-slate-900">Agent Session Forensics (Pages, Searches, Edits)</td>
-              <td class="py-4 px-5 text-emerald-700 font-semibold">✓ S3-Archived Session Logs with Exact Search Queries</td>
-              <td class="py-4 px-5 text-slate-500">✕ Basic record edit timestamp only; no search tracking</td>
+              <td class="py-3.5 px-4 sm:px-5 font-bold text-slate-900">Agent Session Forensics (Pages, Searches, Edits)</td>
+              <td class="py-3.5 px-4 sm:px-5 text-emerald-700 font-semibold">✓ S3-Archived Session Logs with Exact Search Queries</td>
+              <td class="py-3.5 px-4 sm:px-5 text-slate-500">✕ Basic record edit timestamp only; no search tracking</td>
             </tr>
             <tr class="bg-slate-50">
-              <td class="py-4 px-5 font-bold text-slate-900">5-Minute Abandoned Cart Delay &amp; 3-Order Active Cap</td>
-              <td class="py-4 px-5 text-emerald-700 font-semibold">✓ Native &amp; Configurable via Live System Settings</td>
-              <td class="py-4 px-5 text-slate-500">✕ Requires complex external webhook middleware</td>
+              <td class="py-3.5 px-4 sm:px-5 font-bold text-slate-900">5-Minute Abandoned Cart Delay &amp; 3-Order Active Cap</td>
+              <td class="py-3.5 px-4 sm:px-5 text-emerald-700 font-semibold">✓ Native &amp; Configurable via Live System Settings</td>
+              <td class="py-3.5 px-4 sm:px-5 text-slate-500">✕ Requires complex external webhook middleware</td>
             </tr>
             <tr class="bg-white">
-              <td class="py-4 px-5 font-bold text-slate-900">Custom ERP Integration &amp; Transition Failed Queue</td>
-              <td class="py-4 px-5 text-emerald-700 font-semibold">✓ Tailored to Your ERP + 1-Click Bulk Re-Sync Queue</td>
-              <td class="py-4 px-5 text-slate-500">✕ Rigid plugins; silent webhook failures lose orders</td>
+              <td class="py-3.5 px-4 sm:px-5 font-bold text-slate-900">Custom ERP Integration &amp; Transition Failed Queue</td>
+              <td class="py-3.5 px-4 sm:px-5 text-emerald-700 font-semibold">✓ Tailored to Your ERP + 1-Click Bulk Re-Sync Queue</td>
+              <td class="py-3.5 px-4 sm:px-5 text-slate-500">✕ Rigid plugins; silent webhook failures lose orders</td>
             </tr>
             <tr class="bg-slate-50">
-              <td class="py-4 px-5 font-bold text-slate-900">3-Tier Granular RBAC (View / Add / Update / Delete)</td>
-              <td class="py-4 px-5 text-emerald-700 font-semibold">✓ Custom Permission Matrix → Roles → Multi-Role Users</td>
-              <td class="py-4 px-5 text-slate-500">✕ Locked behind expensive Enterprise tier upgrades</td>
+              <td class="py-3.5 px-4 sm:px-5 font-bold text-slate-900">3-Tier Granular RBAC (View / Add / Update / Delete)</td>
+              <td class="py-3.5 px-4 sm:px-5 text-emerald-700 font-semibold">✓ Custom Permission Matrix → Roles → Multi-Role Users</td>
+              <td class="py-3.5 px-4 sm:px-5 text-slate-500">✕ Locked behind expensive Enterprise tier upgrades</td>
             </tr>
             <tr class="bg-white">
-              <td class="py-4 px-5 font-bold text-slate-900">Licensing &amp; Ownership Model</td>
-              <td class="py-4 px-5 text-emerald-700 font-semibold">✓ Unlimited Agents / Custom Deployed on Your Cloud</td>
-              <td class="py-4 px-5 text-slate-500">✕ Expensive per-user/month fees that penalize growth</td>
+              <td class="py-3.5 px-4 sm:px-5 font-bold text-slate-900">Licensing &amp; Ownership Model</td>
+              <td class="py-3.5 px-4 sm:px-5 text-emerald-700 font-semibold">✓ Unlimited Agents / Custom Deployed on Your Cloud</td>
+              <td class="py-3.5 px-4 sm:px-5 text-slate-500">✕ Expensive per-user/month fees that penalize growth</td>
             </tr>
           </tbody>
         </table>
@@ -1372,25 +1306,25 @@
     </div>
   </section>
 
-  <!-- LEAD CAPTURE FORM SECTION -->
-  <section id="lead-form" class="py-20 bg-slate-100">
+  <!-- LEAD CAPTURE FORM SECTION (PRE-WIRED FOR PRIVATE GOOGLE SHEET PROXY) -->
+  <section id="lead-form" class="py-14 sm:py-20 bg-slate-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-brand-dark text-white rounded-3xl overflow-hidden shadow-2xl border border-slate-800 grid lg:grid-cols-12">
+      <div class="bg-brand-dark text-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-slate-800 grid lg:grid-cols-12">
         
         <!-- Left Value Column -->
-        <div class="lg:col-span-5 p-8 sm:p-12 bg-gradient-to-br from-brand-sidebar to-slate-900 flex flex-col justify-between">
+        <div class="lg:col-span-5 p-6 sm:p-10 lg:p-12 bg-gradient-to-br from-brand-sidebar to-slate-900 flex flex-col justify-between">
           <div>
             <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-mono uppercase mb-4">
               Fast-Track Custom Deployment
             </span>
-            <h2 class="text-3xl font-extrabold leading-tight">
+            <h2 class="text-2xl sm:text-3xl font-extrabold leading-tight">
               Get a Custom CRM Tailored to Your ERP &amp; Workflow in Weeks.
             </h2>
-            <p class="text-slate-300 text-sm mt-4 leading-relaxed">
+            <p class="text-slate-300 text-xs sm:text-sm mt-3.5 leading-relaxed">
               Because our core queue engine, RBAC matrix, session forensics, and settings architecture are already running in live production, we focus 100% on customizing your business rules and integrating your ERP and telephony provider.
             </p>
 
-            <div class="mt-8 space-y-4 text-sm">
+            <div class="mt-6 sm:mt-8 space-y-4 text-xs sm:text-sm">
               <div class="flex items-start gap-3">
                 <div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">1</div>
                 <div>
@@ -1402,7 +1336,7 @@
                 <div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">2</div>
                 <div>
                   <strong class="text-white block">Custom ERP &amp; Telephony Wiring</strong>
-                  <span class="text-slate-400 text-xs">We build your bi-directional ERP sync, connect 3rd-party Click-to-Call (or bring our partner), and wire WABA.</span>
+                  <span class="text-slate-400 text-xs">We build your bi-directional ERP sync, connect 3rd-party Click-to-Call, and wire WABA.</span>
                 </div>
               </div>
               <div class="flex items-start gap-3">
@@ -1415,44 +1349,47 @@
             </div>
           </div>
 
-          <div class="mt-10 pt-6 border-t border-slate-800 text-xs text-slate-400 flex items-center justify-between">
+          <div class="mt-8 pt-5 border-t border-slate-800 text-xs text-slate-400 flex items-center justify-between">
             <span>Engineered by <strong class="text-white">Rampup Infotech</strong></span>
-            <span class="text-emerald-400 font-mono">Production-Proven Stack</span>
+            <span class="text-emerald-400 font-mono">Production-Proven</span>
           </div>
         </div>
 
         <!-- Right Interactive Lead Capture Form -->
-        <div class="lg:col-span-7 p-8 sm:p-12 bg-white text-slate-900">
-          <h3 class="text-2xl font-extrabold text-slate-900">Book Your Live CRM Architecture Walkthrough</h3>
-          <p class="text-sm text-slate-500 mt-1 mb-6">Tell us about your team size, current ERP, and operational goals—we'll prepare a tailored live demo.</p>
+        <div class="lg:col-span-7 p-6 sm:p-10 lg:p-12 bg-white text-slate-900">
+          <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900">Book Your Live CRM Architecture Walkthrough</h3>
+          <p class="text-xs sm:text-sm text-slate-500 mt-1 mb-6">Tell us about your team size, current ERP, and operational goals—we'll prepare a tailored live demo.</p>
 
-          <form id="crmLeadForm" onsubmit="handleLeadSubmit(event)" class="space-y-5">
+          <form id="crmLeadForm" onsubmit="handleLeadSubmit(event)" class="space-y-4 sm:space-y-5">
+            <!-- Hidden Anti-Bot Honeypot Field -->
+            <input type="text" name="website_hp" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
+
             <div class="grid sm:grid-cols-2 gap-4">
               <div>
                 <label class="block text-xs font-bold uppercase text-slate-600 mb-1.5">Full Name *</label>
-                <input type="text" required name="name" placeholder="e.g., Vikram Mehta" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-emerald focus:ring-2 focus:ring-emerald-500/20 outline-none text-sm" />
+                <input type="text" required name="name" placeholder="e.g., Vikram Mehta" class="w-full px-3.5 py-3 rounded-xl border border-slate-300 focus:border-brand-emerald focus:ring-2 focus:ring-emerald-500/20 outline-none text-sm" />
               </div>
               <div>
                 <label class="block text-xs font-bold uppercase text-slate-600 mb-1.5">Work Email *</label>
-                <input type="email" required name="email" placeholder="vikram@yourcompany.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-emerald focus:ring-2 focus:ring-emerald-500/20 outline-none text-sm" />
+                <input type="email" required name="email" placeholder="vikram@yourcompany.com" class="w-full px-3.5 py-3 rounded-xl border border-slate-300 focus:border-brand-emerald focus:ring-2 focus:ring-emerald-500/20 outline-none text-sm" />
               </div>
             </div>
 
             <div class="grid sm:grid-cols-2 gap-4">
               <div>
                 <label class="block text-xs font-bold uppercase text-slate-600 mb-1.5">Phone / WhatsApp Number *</label>
-                <input type="tel" required name="phone" placeholder="+91 98XXXXXXXX" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-emerald focus:ring-2 focus:ring-emerald-500/20 outline-none text-sm" />
+                <input type="tel" required name="phone" placeholder="+91 98XXXXXXXX" class="w-full px-3.5 py-3 rounded-xl border border-slate-300 focus:border-brand-emerald focus:ring-2 focus:ring-emerald-500/20 outline-none text-sm" />
               </div>
               <div>
                 <label class="block text-xs font-bold uppercase text-slate-600 mb-1.5">Company / Brand Name *</label>
-                <input type="text" required name="company" placeholder="e.g., Acme Commerce Pvt Ltd" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-emerald focus:ring-2 focus:ring-emerald-500/20 outline-none text-sm" />
+                <input type="text" required name="company" placeholder="e.g., Acme Commerce Pvt Ltd" class="w-full px-3.5 py-3 rounded-xl border border-slate-300 focus:border-brand-emerald focus:ring-2 focus:ring-emerald-500/20 outline-none text-sm" />
               </div>
             </div>
 
             <div class="grid sm:grid-cols-2 gap-4">
               <div>
                 <label class="block text-xs font-bold uppercase text-slate-600 mb-1.5">Your Industry Domain *</label>
-                <select required name="industry" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-emerald focus:ring-2 focus:ring-emerald-500/20 outline-none text-sm bg-white">
+                <select required name="industry" class="w-full px-3.5 py-3 rounded-xl border border-slate-300 focus:border-brand-emerald focus:ring-2 focus:ring-emerald-500/20 outline-none text-sm bg-white">
                   <option value="D2C & Omnichannel E-Commerce">D2C &amp; Omnichannel E-Commerce</option>
                   <option value="B2B Distribution & Wholesale">B2B Distribution &amp; Wholesale</option>
                   <option value="Healthcare, E-Pharmacy & Diagnostics">Healthcare, E-Pharmacy &amp; Diagnostics</option>
@@ -1463,7 +1400,7 @@
               </div>
               <div>
                 <label class="block text-xs font-bold uppercase text-slate-600 mb-1.5">Agents / Operations Seat Count *</label>
-                <select required name="seats" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-emerald focus:ring-2 focus:ring-emerald-500/20 outline-none text-sm bg-white">
+                <select required name="seats" class="w-full px-3.5 py-3 rounded-xl border border-slate-300 focus:border-brand-emerald focus:ring-2 focus:ring-emerald-500/20 outline-none text-sm bg-white">
                   <option value="5 - 15 Agents">5 – 15 Agents</option>
                   <option value="15 - 50 Agents" selected>15 – 50 Agents</option>
                   <option value="50 - 150 Agents">50 – 150 Agents</option>
@@ -1472,42 +1409,41 @@
               </div>
             </div>
 
-            <!-- Required Integrations Checkboxes -->
+            <!-- Required Integrations Checkboxes (1 col on very small phones, 2 on sm, 3 on md) -->
             <div>
               <label class="block text-xs font-bold uppercase text-slate-600 mb-2">Modules &amp; Custom Integrations Needed</label>
-              <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 text-xs font-semibold text-slate-700">
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 text-xs font-semibold text-slate-700">
                 <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 cursor-pointer hover:bg-slate-50">
-                  <input type="checkbox" name="integrations" value="3rd-Party Click-to-Call" checked class="accent-brand-emerald" /> Click-to-Call Telephony
+                  <input type="checkbox" name="integrations" value="3rd-Party Click-to-Call" checked class="accent-brand-emerald shrink-0" /> <span>Click-to-Call Telephony</span>
                 </label>
                 <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 cursor-pointer hover:bg-slate-50">
-                  <input type="checkbox" name="integrations" value="WhatsApp WABA" checked class="accent-brand-emerald" /> WhatsApp (WABA)
+                  <input type="checkbox" name="integrations" value="WhatsApp WABA" checked class="accent-brand-emerald shrink-0" /> <span>WhatsApp (WABA)</span>
                 </label>
                 <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 cursor-pointer hover:bg-slate-50">
-                  <input type="checkbox" name="integrations" value="Custom ERP Integration" checked class="accent-brand-emerald" /> Custom ERP Integration
+                  <input type="checkbox" name="integrations" value="Custom ERP Integration" checked class="accent-brand-emerald shrink-0" /> <span>Custom ERP Sync</span>
                 </label>
                 <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 cursor-pointer hover:bg-slate-50">
-                  <input type="checkbox" name="integrations" value="Agent Session Audit" checked class="accent-brand-emerald" /> Session Forensics
+                  <input type="checkbox" name="integrations" value="Agent Session Audit" checked class="accent-brand-emerald shrink-0" /> <span>Session Forensics</span>
                 </label>
                 <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 cursor-pointer hover:bg-slate-50">
-                  <input type="checkbox" name="integrations" value="Granular RBAC" checked class="accent-brand-emerald" /> Granular RBAC
+                  <input type="checkbox" name="integrations" value="Granular RBAC" checked class="accent-brand-emerald shrink-0" /> <span>Granular RBAC</span>
                 </label>
                 <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 cursor-pointer hover:bg-slate-50">
-                  <input type="checkbox" name="integrations" value="SLA Ticketing" class="accent-brand-emerald" /> SLA Support Desk
+                  <input type="checkbox" name="integrations" value="SLA Ticketing" class="accent-brand-emerald shrink-0" /> <span>SLA Support Desk</span>
                 </label>
               </div>
             </div>
 
             <div>
               <label class="block text-xs font-bold uppercase text-slate-600 mb-1.5">Which ERP / Telephony System Do You Currently Use? (Optional)</label>
-              <textarea rows="2" name="notes" placeholder="e.g., Running Tally / SAP / Custom ERP; need Click-to-Call integration + abandoned cart calling queue..." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:border-brand-emerald focus:ring-2 focus:ring-emerald-500/20 outline-none text-sm"></textarea>
+              <textarea rows="2" name="notes" placeholder="e.g., Running Tally / SAP / Custom ERP; need Click-to-Call integration + abandoned cart calling queue..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:border-brand-emerald focus:ring-2 focus:ring-emerald-500/20 outline-none text-sm"></textarea>
             </div>
 
-            <button type="submit" class="w-full py-4 rounded-xl bg-brand-emerald hover:bg-brand-emeraldLight text-white font-extrabold text-base shadow-lg shadow-emerald-600/20 transition flex items-center justify-center gap-2">
+            <button type="submit" class="w-full py-4 rounded-xl bg-brand-emerald hover:bg-brand-emeraldLight text-white font-extrabold text-sm sm:text-base shadow-lg shadow-emerald-600/20 transition flex items-center justify-center gap-2">
               <span>Schedule Live Production Demo &amp; Get Quote</span>
               <i data-lucide="send" class="w-4 h-4"></i>
             </button>
 
-            <!-- Instant Confirmation Banner (Hidden by Default) -->
             <div id="formSuccessBanner" class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-900 text-sm">
               <strong class="font-bold block">✓ Architecture Request Captured!</strong>
               <span id="formSuccessDetails" class="text-xs text-emerald-700 mt-1 block"></span>
@@ -1519,28 +1455,28 @@
     </div>
   </section>
 
-  <!-- FAQ SECTION (FOR SEO & GEO AI OVERVIEWS) -->
-  <section class="py-16 bg-white border-t border-slate-200">
+  <!-- FAQ SECTION -->
+  <section class="py-14 sm:py-16 bg-white border-t border-slate-200">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 text-center mb-10">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 text-center mb-8 sm:mb-10">
         Frequently Asked Questions
       </h2>
       <div class="space-y-4">
-        <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50">
-          <h3 class="font-bold text-slate-900 text-base">Is the ERP integration pre-built, or do you integrate with whatever ERP we use?</h3>
-          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+        <div class="p-5 sm:p-6 rounded-2xl border border-slate-200 bg-slate-50">
+          <h3 class="font-bold text-slate-900 text-sm sm:text-base">Is the ERP integration pre-built, or do you integrate with whatever ERP we use?</h3>
+          <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
             We custom-integrate directly with whatever ERP your business runs (SAP, Tally Prime, Microsoft Dynamics, Oracle, Medica, or custom SQL/REST APIs). And because ERP networks occasionally experience downtime or unmapped item codes, our built-in <strong>Order Transition Failed</strong> queue captures any rejected order so your team can re-sync it in one click.
           </p>
         </div>
-        <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50">
-          <h3 class="font-bold text-slate-900 text-base">How does Click-to-Call telephony integration work?</h3>
-          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+        <div class="p-5 sm:p-6 rounded-2xl border border-slate-200 bg-slate-50">
+          <h3 class="font-bold text-slate-900 text-sm sm:text-base">How does Click-to-Call telephony integration work?</h3>
+          <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
             Our CRM supports third-party Click-to-Call cloud telephony integration. We can integrate with your existing telephony vendor or set you up quickly through our partnered telephony provider—enabling 1-click outbound dialing, automatic customer lookup on incoming calls, and automated call status disposition logs.
           </p>
         </div>
-        <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50">
-          <h3 class="font-bold text-slate-900 text-base">Can supervisors see exact agent searches and changes inside each login session?</h3>
-          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+        <div class="p-5 sm:p-6 rounded-2xl border border-slate-200 bg-slate-50">
+          <h3 class="font-bold text-slate-900 text-sm sm:text-base">Can supervisors see exact agent searches and changes inside each login session?</h3>
+          <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
             Yes. Every agent session is logged and archived to S3 with full forensic detail—showing session duration, IP address, every URL/page visited, exact product or customer search strings typed by the agent, and every cart or order status modification.
           </p>
         </div>
@@ -1549,10 +1485,10 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-brand-dark text-slate-400 py-12 border-t border-slate-800 text-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+  <footer class="bg-brand-dark text-slate-400 py-10 sm:py-12 border-t border-slate-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
       <div class="flex items-center gap-3">
-        <svg class="w-8 h-8 rounded-lg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="w-8 h-8 rounded-lg shrink-0" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="64" height="64" rx="14" fill="#0F1A2A" stroke="#10B981" stroke-width="2"/>
           <path d="M18 46V18L34 38V18" stroke="#10B981" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M34 38L46 22M34 38L46 46" stroke="#34D399" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1572,6 +1508,12 @@
   <!-- INTERACTIVE JAVASCRIPT LOGIC -->
   <script>
     lucide.createIcons();
+
+    // Mobile Menu Drawer Toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
 
     // 1. Domain-Dynamic Industry Switcher Data
     const industryContent = {
@@ -1659,7 +1601,6 @@
       document.querySelectorAll('.crm-screen').forEach(el => el.classList.add('hidden'));
       document.getElementById('screen-' + screenKey).classList.remove('hidden');
 
-      // Update Top Pills
       document.querySelectorAll('.crm-tab-btn').forEach(btn => {
         btn.classList.remove('tab-active');
         btn.classList.add('bg-white', 'text-slate-700');
@@ -1670,7 +1611,6 @@
         topBtn.classList.remove('bg-white', 'text-slate-700');
       }
 
-      // Update Left Sidebar
       allScreenKeys.forEach(k => {
         const sideEl = document.getElementById('side-' + k);
         if (sideEl) {
@@ -1683,7 +1623,7 @@
       });
     }
 
-    // 3. Filter Session Forensics Events (All / Pages / Searches / Changes)
+    // 3. Filter Session Forensics Events
     function filterSessionEvents(type) {
       const items = document.querySelectorAll('.sess-item');
       items.forEach(item => {
@@ -1710,36 +1650,58 @@
       });
     }
 
-    // 4. Lead Form Submission Handler
-    function handleLeadSubmit(event) {
+    // 4. Google Sheets Secure Write-Only Proxy Integration
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/PASTE_YOUR_DEPLOYMENT_ID_HERE/exec";
+
+    async function handleLeadSubmit(event) {
       event.preventDefault();
       const form = event.target;
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalBtnHTML = submitBtn.innerHTML;
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>Securing Your Blueprint Request...</span>';
+
       const formData = new FormData(form);
       const integrations = formData.getAll('integrations').join(', ');
 
       const payload = {
+        secret_key: "NXO_2026_RAMPUP_99481_SECURE",
+        website_hp: formData.get('website_hp') || "",
         name: formData.get('name'),
         email: formData.get('email'),
         phone: formData.get('phone'),
         company: formData.get('company'),
         industry: formData.get('industry'),
         seats: formData.get('seats'),
-        integrations: integrations,
-        notes: formData.get('notes'),
-        submittedAt: new Date().toISOString()
+        integrations: integrations || "Core Stack",
+        notes: formData.get('notes') || "None provided"
       };
 
-      console.log('Captured CRM Lead Payload:', payload);
-      const waText = encodeURIComponent(
-        `Hi, I just requested a Custom CRM demo.\n\n*Name:* ${payload.name}\n*Company:* ${payload.company}\n*Industry:* ${payload.industry}\n*Seats:* ${payload.seats}\n*Modules:* ${payload.integrations}\n*Notes:* ${payload.notes}`
-      );
-      window.open(`https://wa.me/918691923653?text=${waText}`, '_blank');
+      try {
+        if (GOOGLE_SCRIPT_URL.includes("PASTE_YOUR_DEPLOYMENT_ID_HERE")) {
+          // Demo fallback until you paste your deployed Google Apps Script URL
+          console.log("Captured Lead Payload (Ready for Google Sheets):", payload);
+        } else {
+          await fetch(GOOGLE_SCRIPT_URL, {
+            method: "POST",
+            headers: { "Content-Type": "text/plain;charset=utf-8" },
+            body: JSON.stringify(payload)
+          });
+        }
 
-      const banner = document.getElementById('formSuccessBanner');
-      const details = document.getElementById('formSuccessDetails');
-      details.textContent = `Thank you, ${payload.name} (${payload.company}). We have logged your custom CRM blueprint request for ${payload.industry} (${payload.seats}) with [${integrations || 'Core Stack'}]. Our solution architect will reach out on ${payload.phone} shortly.`;
-      banner.classList.remove('hidden');
-      form.reset();
+        const banner = document.getElementById('formSuccessBanner');
+        const details = document.getElementById('formSuccessDetails');
+        details.textContent = `Thank you, ${payload.name} (${payload.company}). We have logged your custom CRM blueprint request for ${payload.industry} (${payload.seats}) with [${payload.integrations}]. Our solution architect will reach out on ${payload.phone} shortly.`;
+        banner.classList.remove('hidden');
+        form.reset();
+      } catch (error) {
+        console.error("Lead submission error:", error);
+        alert("Network error while submitting. Please try again.");
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHTML;
+      }
     }
   </script>
 </body>
